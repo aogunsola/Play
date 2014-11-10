@@ -16,10 +16,18 @@ namespace MoveASaurasRex
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton ListsButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton MoveDetailsButton { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (ListsButton != null) {
+				ListsButton.Dispose ();
+				ListsButton = null;
+			}
 			if (MoveDetailsButton != null) {
 				MoveDetailsButton.Dispose ();
 				MoveDetailsButton = null;
