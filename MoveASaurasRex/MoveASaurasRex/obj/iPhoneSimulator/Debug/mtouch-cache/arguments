@@ -1,5 +1,5 @@
 # Version: 8.4.0.16 (80e9ff7)
-# [first argument, ignore] # /Users/ayoola/Projects/MoveASaurasRex/MoveASaurasRex/mtouch.exe
+# [first argument, ignore] # /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/mtouch.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/8.4.0.16/bin/mtouch \
 	--cache \
 	obj/iPhoneSimulator/Debug/mtouch-cache \
@@ -26,4 +26,4 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
-	/Users/ayoola/Projects/MoveASaurasRex/MoveASaurasRex/bin/iPhoneSimulator/Debug//MoveASaurasRex.exe \
+	/Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/bin/iPhoneSimulator/Debug//MoveASaurasRex.exe \
