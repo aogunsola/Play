@@ -3,10 +3,12 @@
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPad.plist
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/191-view-192.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/240-view-245.nib
+/Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/289-view-290.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/33-view-34.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/Info.plist
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/UIViewController-191.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/UIViewController-238.nib
+/Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/UIViewController-289.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPhone.storyboardc/UIViewController-33.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPad.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
 /Users/ayoola/Documents/GitHub/Play/MoveASaurasRex/MoveASaurasRex/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard_iPad.storyboardc/Info.plist

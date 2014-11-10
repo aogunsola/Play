@@ -121,6 +121,10 @@
     <Compile Include="HomeViewController.designer.cs">
       <DependentUpon>HomeViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateListViewController.cs" />
+    <Compile Include="CreateListViewController.designer.cs">
+      <DependentUpon>CreateListViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />

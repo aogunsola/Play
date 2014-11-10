@@ -10,5 +10,11 @@ namespace MoveASaurasRex
 		public ListsViewController (IntPtr handle) : base (handle)
 		{
 		}
+
+		[Action("UnwindToListsViewController:")]
+		public void UnwindToListsViewController(UIStoryboardSegue segue)
+		{
+			Console.WriteLine ("going back to lists page");
+		}
 	}
 }
