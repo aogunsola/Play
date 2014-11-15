@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="MoveASaurasRex/MoveDetailViewController.cs" Line="4" Column="4" />
+      <File FileName="MoveASaurasRex/ListsViewController.cs" Line="1" Column="1" />
+      <File FileName="MoveASaurasRex/HomeViewController.cs" Line="1" Column="1" />
+      <File FileName="MoveASaurasRex/CreateListViewController.cs" Line="4" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
