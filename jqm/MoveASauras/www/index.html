@@ -36,7 +36,7 @@
         <div class="app">
             <div data-role="page" id="home">  <!-- home page -->
                 <header data-role="header">
-                    <h1>top</h1>
+                    <h1>Move-A-SaurasREX</h1>
                 </header>
             
                 <div role="main" class="ui-content">
@@ -177,6 +177,7 @@
                         <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 10</p></a></div></div>
                         <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 11</p></a></div></div>
                         <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 12</p></a></div></div>
+                    </div>
                 </div>
                 
                 <footer data-role="footer" data-position="fixed">
@@ -190,8 +191,41 @@
                     </nav>
                 </footer>
             </div> <!-- page end -->
-        </div>
 
+
+            <div data-role="page" id="movelists">  <!-- MoveLists page -->
+                <header data-role="header">
+                    <h1>Move Lists</h1>
+                    <a href="#home" data-icon="carat-l">Back</a>
+                    <a href="#newlist" data-icon="plus" data-transition="pop">Add</a>
+                </header>
+    
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-role="list-divider">Folders</li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
+                        <li data-role="list-divider">Checklists</li>
+                        <li><a href="#">Checklist 1</a></li>
+                        <li><a href="#">Checklist 2</a></li>
+                        <li><a href="#">Checklist 3</a></li>
+                        <li><a href="#">Checklist 4</a></li>
+                    </ul>
+                </div>
+    
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#" data-icon="search">Search</a></li>
+                            <li><a href="#" data-icon="action">Share</a></li>
+                            <li><a href="#" data-icon="gear">Settings</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
 
 
 
@@ -203,6 +237,6 @@
             </div>
         </div> -->
         
-        
+        </div>
     </body>
 </html>
