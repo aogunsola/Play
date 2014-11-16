@@ -40,17 +40,19 @@
                 </header>
             
                 <div role="main" class="ui-content">
+                    <p><i><center>Taking the terror out of moving</center></i></p>
                     <a href="#movedetails" class="ui-btn" data-transition="pop">Move Details</a>
                     <a href="#movelists" class="ui-btn" data-transition="pop">Lists</a>
+                    <p> Advertising goes here?</p>
                 </div>
             
                 <footer data-role="footer" data-position="fixed">
                     <nav data-role="navbar">
                         <ul>
                             <li><a href="#" data-icon="home">Home</a></li>
-                            <li><a href="#" data-icon="search">Search</a></li>
-                            <li><a href="#" data-icon="action">Share</a></li>
-                            <li><a href="#" data-icon="gear">Settings</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
                         </ul>
                     </nav>
                 </footer>
@@ -59,8 +61,8 @@
             <div data-role="page" id="movedetails">  <!-- MoveDetails page -->
                 <header data-role="header">
                     <h1>My Move</h1>
-                    <a href="#home" class= "ui-btn ui-btn-right">Done</a>
-                    <a href="#home" class= "ui-btn ui-btn-left">Cancel</a>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                     <!-- <input type="submit" value="Done"> -->
                 </header>
                 
@@ -83,8 +85,8 @@
             <div data-role="page" id="newlist">  <!-- NewList page -->
                 <header data-role="header">
                     <h1>New List</h1>
-                    <a href="#movelists" class= "ui-btn ui-btn-right">Done</a>
-                    <a href="#movelists" class= "ui-btn ui-btn-left">Cancel</a>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -103,8 +105,8 @@
             <div data-role="page" id="movelists">  <!-- MoveLists page -->
                 <header data-role="header">
                     <h1>Move Lists</h1>
-                    <a href="#home" data-icon="carat-l">Back</a>
-                    <a href="#newlist" data-icon="plus" data-transition="pop">Add</a>
+                    <a href="#" class="ui-btn ui-icon-carat-l" data-rel="back">Back</a>
+                    <a href="#newlist" class="ui-btn" data-icon="plus" data-transition="pop">Add</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -126,9 +128,9 @@
                     <nav data-role="navbar">
                         <ul>
                             <li><a href="#home" data-icon="home">Home</a></li>
-                            <li><a href="#" data-icon="search">Search</a></li>
-                            <li><a href="#" data-icon="action">Share</a></li>
-                            <li><a href="#" data-icon="gear">Settings</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
                         </ul>
                     </nav>
                 </footer>
@@ -140,14 +142,15 @@
             <div data-role="page" id="newitem">  <!-- NewFolderItem page -->
                 <header data-role="header">
                     <h1>New Item</h1>
-                    <a href="#viewfolder" class= "ui-btn ui-btn-right">Done</a>
-                    <a href="#viewfolder" class= "ui-btn ui-btn-left">Cancel</a>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
               
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true">
                         <label>Picture:</label>
+                        <button class="ui-btn ui-icon-camera">Add/Change Picture</button>
                         <img src="xx">
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -159,8 +162,8 @@
             <div data-role="page" id="viewfolder">  <!-- ViewFolder page -->
                 <header data-role="header">
                     <h1>Folder View</h1>
-                    <a href="#movelists" data-icon="carat-l">Back</a>
-                    <a href="#newitem" data-icon="plus">Add</a>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                    <a href="#newitem" class="ui-btn" data-icon="plus">Add</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -184,35 +187,28 @@
                     <nav data-role="navbar">
                         <ul>
                             <li><a href="#home" data-icon="home">Home</a></li>
-                            <li><a href="#" data-icon="search">Search</a></li>
-                            <li><a href="#" data-icon="action">Share</a></li>
-                            <li><a href="#" data-icon="gear">Settings</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
                         </ul>
                     </nav>
                 </footer>
             </div> <!-- page end -->
 
 
-            <div data-role="page" id="movelists">  <!-- MoveLists page -->
+            <div data-role="page" id="search">  <!-- Search page -->
                 <header data-role="header">
-                    <h1>Move Lists</h1>
-                    <a href="#home" data-icon="carat-l">Back</a>
-                    <a href="#newlist" data-icon="plus" data-transition="pop">Add</a>
+                    <h1>Search</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
                 </header>
     
                 <div role="main" class="ui-content">
-                    <ul data-role="listview" data-inset="true">
-                        <li data-role="list-divider">Folders</li>
-                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
-                        <li data-role="list-divider">Checklists</li>
-                        <li><a href="#">Checklist 1</a></li>
-                        <li><a href="#">Checklist 2</a></li>
-                        <li><a href="#">Checklist 3</a></li>
-                        <li><a href="#">Checklist 4</a></li>
-                    </ul>
+                    <form>
+                        <input type="search" name="text-search" id="text-search" placeholder="Search locations">
+                        <label for="text-distance">Distance (in miles):</label>
+                        <input type="text" name="text-distance" id="text-distance" data-clear-btn="true">
+                    </form>
+                    <p>Results</p>
                 </div>
     
                 <footer data-role="footer" data-position="fixed">
@@ -220,13 +216,68 @@
                         <ul>
                             <li><a href="#home" data-icon="home">Home</a></li>
                             <li><a href="#" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            
+            <div data-role="page" id="share">  <!-- Share page -->
+                <header data-role="header">
+                    <h1>Share Data</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Print all items</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Share via Email</a></li>
+                        <p> display more info here??</p>
+                    </ul>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
                             <li><a href="#" data-icon="action">Share</a></li>
-                            <li><a href="#" data-icon="gear">Settings</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
                         </ul>
                     </nav>
                 </footer>
             </div> <!-- page end -->
 
+
+            <div data-role="page" id="tools">  <!-- Tools page -->
+                <header data-role="header">
+                    <h1>Tools</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                </header>
+    
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Review Help topics</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Delete all data</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Rate Our App</a></li>
+                    </ul>
+        
+                    <p>Move-A-SaurasREX version: 1.0</p>
+                </div>
+    
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
 
 
         <!--<div class="app">
