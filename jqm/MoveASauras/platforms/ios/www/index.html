@@ -68,7 +68,7 @@
                     <form>
                         <label>Details</label>
                         <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true">
-                        <input type="text" name="text-movedate" id="text-movedate" placeholder="Move Date" data-clear-btn="true">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date">
                         <label>Moving To:</label>
                         <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true">
                         <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true">
@@ -79,15 +79,42 @@
                 </div>
             </div> <!-- page end -->
             
+            
+            <div data-role="page" id="newlist">  <!-- NewList page -->
+                <header data-role="header">
+                    <h1>New List</h1>
+                    <a href="#movelists" class= "ui-btn ui-btn-right">Done</a>
+                    <a href="#movelists" class= "ui-btn ui-btn-left">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label for="text-listname">Name:</label>
+                        <input type="text" name="text-listname" id="text-listname" data-clear-btn="true">
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-listnotes" id="textarea-listnotes"></textarea>
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder">
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            
             <div data-role="page" id="movelists">  <!-- MoveLists page -->
                 <header data-role="header">
                     <h1>Move Lists</h1>
                     <a href="#home" data-icon="carat-l">Back</a>
-                    <a href="#newlist" data-icon="plus">Add</a>
+                    <a href="#newlist" data-icon="plus" data-transition="pop">Add</a>
                 </header>
                 
                 <div role="main" class="ui-content">
                     <ul data-role="listview" data-inset="true">
+                        <li data-role="list-divider">Folders</li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
+                        <li data-role="list-divider">Checklists</li>
                         <li><a href="#">Checklist 1</a></li>
                         <li><a href="#">Checklist 2</a></li>
                         <li><a href="#">Checklist 3</a></li>
@@ -106,28 +133,69 @@
                     </nav>
                 </footer>
             </div> <!-- page end -->
+          
+          
+          
+          
+            <div data-role="page" id="newitem">  <!-- NewFolderItem page -->
+                <header data-role="header">
+                    <h1>New Item</h1>
+                    <a href="#viewfolder" class= "ui-btn ui-btn-right">Done</a>
+                    <a href="#viewfolder" class= "ui-btn ui-btn-left">Cancel</a>
+                </header>
+              
+                <div role="main" class="ui-content">
+                    <form>
+                        <label for="text-itemname">Name:</label>
+                        <input type="text" name="text-itemname" id="text-itemname" data-clear-btn="true">
+                        <label>Picture:</label>
+                        <img src="xx">
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+          
+          
+            <div data-role="page" id="viewfolder">  <!-- ViewFolder page -->
+                <header data-role="header">
+                    <h1>Folder View</h1>
+                    <a href="#movelists" data-icon="carat-l">Back</a>
+                    <a href="#newitem" data-icon="plus">Add</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 1</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 5</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 6</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 10</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 11</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 12</p></a></div></div>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#" data-icon="search">Search</a></li>
+                            <li><a href="#" data-icon="action">Share</a></li>
+                            <li><a href="#" data-icon="gear">Settings</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
         </div>
-        
-        <div data-role="page" id="newlist">  <!-- CreateList page -->
-            <header data-role="header">
-                <h1>New List</h1>
-                <a href="#movelists" class= "ui-btn ui-btn-right">Done</a>
-                <a href="#movelists" class= "ui-btn ui-btn-left">Cancel</a>
-            </header>
-            
-            <div role="main" class="ui-content">
-                <form>
-                    <label for="text-listname">Name:</label>
-                    <input type="text" name="text-listname" id="text-listname" data-clear-btn="true">
-                    <label for="textarea-listnotes">Notes:</label>
-                    <input type="text" name="textarea-listnotes" id="textarea-listnotes" data-clear-btn="true">
-                    <label for="switch-folder">Folder</label>
-                    <input type="checkbox" data-role="flipswitch" name="switch-folder" id="switch-folder">
-                </form>
-            </div>
-        </div> <!-- page end -->
-            
-            
+
+
+
+
         <!--<div class="app">
              <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
