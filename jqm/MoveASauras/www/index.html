@@ -23,18 +23,126 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="themes/my-custom-theme-1.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" type="text/css" href="js/jquery-1.4.5/jquery.mobile-1.4.5.min.css" />
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="SQLitePlugin.js"></script>
+        
+        <script type="text/javascript">
+            // Wait for Cordova to load
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var db = window.sqlitePlugin.openDatabase({name: "MoveASauras"});
+            
+            // Cordova is ready
+            function onDeviceReady() {
+                db.transaction(populateDB, errorCB, successCB);
+            }
+        
+            //create table
+            function populateDB(tx) {
+                tx.executeSql('DROP TABLE IF EXISTS Moves');
+                //var sql = "CREATE TABLE IF NOT EXISTS Moves ("
+                //    + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                //    + "Name TEXT, "
+                //    + "Date TEXT)";
+                tx.executeSql('CREATE TABLE IF NOT EXISTS Moves (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT)');
+                tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my first move", "11/20/2012")');
+                tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my second move", "11/30/2014")');
+                queryDB(tx);
+            }
+        
+            
+            //function called when error occurs
+            function errorCB(err) {
+                alert("Error processing SQL: " + err.code);
+            }
+        
+            //function called when process succeeds
+            function successCB() {
+                alert("success!");
+                db.transaction(queryDB, errorCB);
+            }
+        
+            //select all from moves
+            function queryDB(tx) {
+                tx.executeSql('SELECT * FROM Moves', [], querySuccess, errorCB);
+            }
+        
+            function querySuccess(tx, results) {
+            //var len = results.rows.length;
+            //alert("results.rows.length: " + result.rows.length + " [should be 2]");
+            //for (var i = 0; i < len; i++) {
+                //document.getElementById("output").innerHTML
+                
+            //}
+                $('#list-moves').empty();
+                $.each(result.rows, function(index) {
+                   var row = result.rows.item(index);
+                   $('#list-moves').append('<li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">' +row['Name'] + '<span class="ui-li-count">5</span></a></li>');
+                   });
+                   $('#list-moves').listview();
+            }
+        </script>
+        
         
         <title>Home Page</title>
     </head>
     <body>
-        <div class="app">
-            <div data-role="page" id="home">  <!-- home page -->
+        <!--<div class="app">-->
+            <div data-role="page" id="home" data-theme="a">  <!-- Home page -->
+                <header data-role="header">
+                    <h1>My Moves</h1>
+                    <a href="#" class="ui-nodisc-icon" data-icon="bars" data-iconpos="notext">Splash</a>
+                    <a href="#popupMenu" class="ui-nodisc-icon" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <div id="popupMenu" data-role="popup">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#movedetails">Edit move</a></li>
+                            <li><a href="#movedetails">Add new move</a></li>
+                        </ul>
+                    <!--<a href="#newlist" class="ui-btn" data-icon="plus" data-transition="pop">Add</a>-->
+                </header>
+            
+                <div role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#movelists"><img src="xx" class="ui-li-icon ui-corner-none">
+                        <h2>Move 1</h2>
+                        <p>On: 11/20/2014</p>
+                        <p>To: 23 Some Street, SomeTown, NJ 12345</p>
+                        <span class="ui-li-count">6</span></a>
+                    </li>
+                    <li><a href="#movelists"><img src="xx" class="ui-li-icon ui-corner-none">
+                        <h2>Move 2</h2>
+                        <p>On: 12/2/2014</p>
+                        <p>To: 23 Some Street, SomeTown, NJ 12345</p>
+                    <span class="ui-li-count">15</span></a>
+                    </li>
+                    <li><a href="#movelists"><img src="xx" class="ui-li-icon ui-corner-none">
+                        <h2>Move 3</h2>
+                        <p>On: 3/5/2015</p>
+                        <p>To: 23 Some Street, SomeTown, NJ 12345</p>
+                    <span class="ui-li-count">30</span></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <footer data-role="footer" data-position="fixed">
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#search" data-icon="search">Search</a></li>
+                        <li><a href="#share" data-icon="action">Share</a></li>
+                        <li><a href="#tools" data-icon="gear">Tools</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div> <!-- page end -->
+        
+            <div data-role="page" id="splash">  <!-- splash page?? -->
                 <header data-role="header">
                     <h1>Move-A-SaurasREX</h1>
                 </header>
@@ -42,28 +150,28 @@
                 <div role="main" class="ui-content">
                     <p><i><center>Taking the terror out of moving</center></i></p>
                     <a href="#movedetails" class="ui-btn" data-transition="pop">Move Details</a>
-                    <a href="#movelists" class="ui-btn" data-transition="pop">Lists</a>
+                    
                     <p> Advertising goes here?</p>
+                    <p><a href="#" data-icon="home">Home</a></p>
+                    <p><a href="#search" data-icon="search">Search</a></p>
+                    <p><a href="#share" data-icon="action">Share</a></p>
+                    <p><a href="#tools" data-icon="gear">Tools</a></p>
                 </div>
             
                 <footer data-role="footer" data-position="fixed">
                     <nav data-role="navbar">
-                        <ul>
-                            <li><a href="#" data-icon="home">Home</a></li>
-                            <li><a href="#search" data-icon="search">Search</a></li>
-                            <li><a href="#share" data-icon="action">Share</a></li>
-                            <li><a href="#tools" data-icon="gear">Tools</a></li>
-                        </ul>
+                        <p> @Copyright</p>
+
                     </nav>
                 </footer>
             </div> <!-- page end -->
             
             <div data-role="page" id="movedetails">  <!-- MoveDetails page -->
                 <header data-role="header">
-                    <h1>My Move</h1>
+                    <h1>Move Information</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
-                    <!-- <input type="submit" value="Done"> -->
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -288,6 +396,6 @@
             </div>
         </div> -->
         
-        </div>
+       <!-- </div> -->
     </body>
 </html>

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -40,6 +39,12 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		18A7B258C8E84F0B8B4AAC0F /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCFCA082DA4407F8F196200 /* SQLitePlugin.m */; };
+		8F3439CDE0A54359811FC2DB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEE2E38C19145489B18BF0D /* libsqlite3.dylib */; };
+		9DF6699AC1C6420E9DD7214E /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC752E0956645098AADB812 /* CDVCamera.m */; };
+		13D443830E8D4E578273752D /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E153F62EFB84A6D97DDFFDD /* CDVJpegHeaderWriter.m */; };
+		1D2EA429EE8B467487FE67B6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E6C3684E5749788EB28A71 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		375B8EAD67B24895B46CDE9C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB865D79BB52475A92D88C0C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +110,16 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "MoveASaurasRex/config.xml"; sourceTree = "<group>"; };
+		AFCFCA082DA4407F8F196200 /* SQLitePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SQLitePlugin.m"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F8B762FEF0AF48959408AE17 /* SQLitePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SQLitePlugin.h"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		4FEE2E38C19145489B18BF0D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		CFC752E0956645098AADB812 /* CDVCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVCamera.m"; path = "org.apache.cordova.camera/CDVCamera.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		8E153F62EFB84A6D97DDFFDD /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVJpegHeaderWriter.m"; path = "org.apache.cordova.camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		511F4890AD394F9DBBA8F730 /* CDVCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVCamera.h"; path = "org.apache.cordova.camera/CDVCamera.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		05656CC5FDF94CC1875497A6 /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVJpegHeaderWriter.h"; path = "org.apache.cordova.camera/CDVJpegHeaderWriter.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5F8D8F698A4B4500A0FBE930 /* CDVExif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVExif.h"; path = "org.apache.cordova.camera/CDVExif.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		B9E6C3684E5749788EB28A71 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		BB865D79BB52475A92D88C0C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +131,9 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				8F3439CDE0A54359811FC2DB /* libsqlite3.dylib in Frameworks */,
+				1D2EA429EE8B467487FE67B6 /* ImageIO.framework in Frameworks */,
+				375B8EAD67B24895B46CDE9C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +206,9 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				4FEE2E38C19145489B18BF0D /* libsqlite3.dylib */,
+				B9E6C3684E5749788EB28A71 /* ImageIO.framework */,
+				BB865D79BB52475A92D88C0C /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +224,13 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				AFCFCA082DA4407F8F196200 /* SQLitePlugin.m */,
+				F8B762FEF0AF48959408AE17 /* SQLitePlugin.h */,
+				CFC752E0956645098AADB812 /* CDVCamera.m */,
+				8E153F62EFB84A6D97DDFFDD /* CDVJpegHeaderWriter.m */,
+				511F4890AD394F9DBBA8F730 /* CDVCamera.h */,
+				05656CC5FDF94CC1875497A6 /* CDVJpegHeaderWriter.h */,
+				5F8D8F698A4B4500A0FBE930 /* CDVExif.h */,
 			);
 			name = Plugins;
 			path = "MoveASaurasRex/Plugins";
@@ -284,7 +312,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__CLI__" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -387,6 +415,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				18A7B258C8E84F0B8B4AAC0F /* SQLitePlugin.m in Sources */,
+				9DF6699AC1C6420E9DD7214E /* CDVCamera.m in Sources */,
+				13D443830E8D4E578273752D /* CDVJpegHeaderWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
