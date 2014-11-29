@@ -23,79 +23,88 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" href="themes/my-custom-theme-1.min.css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <!--<link rel="stylesheet" href="themes/my-custom-theme-1.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />-->
         <link rel="stylesheet" type="text/css" href="js/jquery-1.4.5/jquery.mobile-1.4.5.min.css" />
         
+        <title>Home Page</title>
+        
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="SQLitePlugin.js"></script>
+
         
-        <script type="text/javascript">
-            // Wait for Cordova to load
-            document.addEventListener("deviceready", onDeviceReady, false);
-            var db = window.sqlitePlugin.openDatabase({name: "MoveASauras"});
+        <script type="text/javascript" charset="utf-8">
             
-            // Cordova is ready
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+        
+            // device APIs are available
+            //
             function onDeviceReady() {
+                // Now safe to use device APIs
+                var db = window.sqlitePlugin.openDatabase({name: "MoveASauras"});
+                
                 db.transaction(populateDB, errorCB, successCB);
             }
         
-            //create table
-            function populateDB(tx) {
-                tx.executeSql('DROP TABLE IF EXISTS Moves');
-                //var sql = "CREATE TABLE IF NOT EXISTS Moves ("
-                //    + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                //    + "Name TEXT, "
-                //    + "Date TEXT)";
-                tx.executeSql('CREATE TABLE IF NOT EXISTS Moves (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT)');
-                tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my first move", "11/20/2012")');
-                tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my second move", "11/30/2014")');
-                queryDB(tx);
-            }
+        //create table
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS Moves');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS Moves (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT)');
+            tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my first move", "11/20/2012")');
+            tx.executeSql('INSERT INTO Moves (Name, Date) VALUES("my second move", "11/30/2014")');
+            queryDB(tx);
+        }
         
-            
-            //function called when error occurs
-            function errorCB(err) {
-                alert("Error processing SQL: " + err.code);
-            }
         
-            //function called when process succeeds
-            function successCB() {
-                alert("success!");
-                db.transaction(queryDB, errorCB);
-            }
+        //function called when error occurs
+        function errorCB(err) {
+            alert("Error processing SQL: " + err.code);
+        }
         
-            //select all from moves
-            function queryDB(tx) {
-                tx.executeSql('SELECT * FROM Moves', [], querySuccess, errorCB);
-            }
+        //function called when process succeeds
+        function successCB() {
+            alert("success!");
+            db.transaction(queryDB, errorCB);
+        }
         
-            function querySuccess(tx, results) {
-            //var len = results.rows.length;
-            //alert("results.rows.length: " + result.rows.length + " [should be 2]");
+        //select all from moves
+        function queryDB(tx) {
+            tx.executeSql('SELECT * FROM Moves', [], querySuccess, errorCB);
+        }
+        
+        function querySuccess(tx, results) {
+            var len = results.rows.length;
+            alert("results.rows.length: " + result.rows.length + " [should be 2]");
             //for (var i = 0; i < len; i++) {
-                //document.getElementById("output").innerHTML
-                
+            //document.getElementById("output").innerHTML
+            
             //}
-                $('#list-moves').empty();
-                $.each(result.rows, function(index) {
+            /*$('#list-moves').empty();
+            $.each(result.rows, function(index) {
                    var row = result.rows.item(index);
                    $('#list-moves').append('<li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">' +row['Name'] + '<span class="ui-li-count">5</span></a></li>');
                    });
-                   $('#list-moves').listview();
-            }
+                   $('#list-moves').listview();*/
+        }
         </script>
-        
-        
-        <title>Home Page</title>
     </head>
     <body>
-        <!--<div class="app">-->
-            <div data-role="page" id="home" data-theme="a">  <!-- Home page -->
-                <header data-role="header">
+        <div class="app">
+            <!--<div class="app">
+             <h1>Apache Cordova</h1>
+             <div id="deviceready" class="blink">
+                 <p class="event listening">Connecting to Device</p>
+                 <p class="event received">Device is Ready</p>
+             </div>
+             </div> -->
+    
+            <div data-role="page" id="home">  <!-- Home page -->
+                <div data-role="header">
                     <h1>My Moves</h1>
                     <a href="#" class="ui-nodisc-icon" data-icon="bars" data-iconpos="notext">Splash</a>
                     <a href="#popupMenu" class="ui-nodisc-icon" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
@@ -104,8 +113,9 @@
                             <li><a href="#movedetails">Edit move</a></li>
                             <li><a href="#movedetails">Add new move</a></li>
                         </ul>
+                    </div>
                     <!--<a href="#newlist" class="ui-btn" data-icon="plus" data-transition="pop">Add</a>-->
-                </header>
+                </div>
             
                 <div role="main" class="ui-content">
                 <ul data-role="listview" data-inset="true">
@@ -130,16 +140,16 @@
                 </ul>
             </div>
             
-            <footer data-role="footer" data-position="fixed">
-                <nav data-role="navbar">
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
                     <ul>
                         <li><a href="#home" data-icon="home">Home</a></li>
                         <li><a href="#search" data-icon="search">Search</a></li>
                         <li><a href="#share" data-icon="action">Share</a></li>
                         <li><a href="#tools" data-icon="gear">Tools</a></li>
                     </ul>
-                </nav>
-            </footer>
+                </div>
+            </div>
         </div> <!-- page end -->
         
             <div data-role="page" id="splash">  <!-- splash page?? -->
@@ -386,16 +396,7 @@
                     </nav>
                 </footer>
             </div> <!-- page end -->
-
-
-        <!--<div class="app">
-             <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div> -->
-        
-       <!-- </div> -->
+            
+        </div>
     </body>
 </html>

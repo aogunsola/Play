@@ -49,15 +49,15 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -76,10 +76,10 @@
         }
     },
     "installed_plugins": {
-        "com.brodysoft.sqlitePlugin": {
+        "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.mbsproject.moveasauras"
         },
-        "org.apache.cordova.camera": {
+        "com.brodysoft.sqlitePlugin": {
             "PACKAGE_NAME": "com.mbsproject.moveasauras"
         }
     },

@@ -14,7 +14,7 @@
 		<string>https://github.com/aogunsola/Play.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>jqm/MoveASauras/platforms/ios/MoveASaurasRex.xcodeproj</string>
+	<string>jqm/MoveASauras_old/platforms/ios/MoveASaurasRex.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9F3E6F70937FBC7F9AAED988D3EF506FA5B69313</key>
