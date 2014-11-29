@@ -20,6 +20,9 @@
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
+    <feature name="SQLitePlugin">
+        <param name="android-package" value="org.pgsqlite.SQLitePlugin" />
+    </feature>
     <name>Move-A-SaurasREX</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

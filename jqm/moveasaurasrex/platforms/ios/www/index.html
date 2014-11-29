@@ -27,24 +27,29 @@
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.min.css">
 
-        <title>Hello World</title>
+        <title>Move-A-SaurasREX</title>
         
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="SQLitePlugin.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
         
         <script type="text/javascript" charset="utf-8">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            //var mydb;
+            
             function onDeviceReady() {
-                var mydb = window.openDatabase("testdb", "1.0", "TEST", 2000000);
-                db.transaction(populateDB, errorCB, successDB)
+                alert("on device ready");
+                var mydb = window.sqlitePlugin.openDatabase({ name: "testdb" });
+                mydb.transaction(populateDB, errorCB, successDB)
+                alert("on device loaded...after db!!");
             }
             
             function populateDB(tx) {
                 tx.executeSql('DROP TABLE IF EXISTS testdb');
                 tx.executeSql('CREATE TABLE IF NOT EXISTS testdb (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT)');
-                tx.executeSql('INSERT INTO testdb (Name, Date) VALUES("my first move", "11/20/2012")');
-                tx.executeSql('INSERT INTO testdb (Name, Date) VALUES("my second move", "11/30/2014")');
+                tx.executeSql('INSERT INTO testdb (Name, Date) VALUES(?, ?)', ["my first move", "11/20/2020"]);
                 queryDB(tx);
             }
         
@@ -56,17 +61,19 @@
             //function called when process succeeds
             function successCB() {
                 alert("success!");
-                db.transaction(queryDB, errorCB);
+                mydb.transaction(queryDB, errorCB);
             }
             
             //select all from moves
             function queryDB(tx) {
                 tx.executeSql('SELECT * FROM testdb', [], querySuccess, errorCB);
+                console.log("queryin...")
             }
             
             function querySuccess(tx, results) {
                 var len = results.rows.length;
-                alert("results.rows.length: " + result.rows.length + " [should be 2]");
+                console.log("results.rows.length: " + result.rows.length + " [should be 2]");
+                
             }
 
         </script>
@@ -78,7 +85,6 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-				<p><a href="#home">Start</a></p>
             </div>
 
             <div data-role="page" id="home">  <!-- Home page -->

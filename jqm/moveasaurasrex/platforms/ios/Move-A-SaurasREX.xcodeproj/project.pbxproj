@@ -54,6 +54,8 @@
 		951FA8BC32E54684982A889B /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2811B07BE0F743F392895DC0 /* CDVNotification.bundle */; };
 		B723C7D2427A4F2A8598AAF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19C8E75249F45368F514D49 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7651B54D782F49C59DAB159E /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8323F4CDD44F9F8CFF671D /* CDVSplashScreen.m */; };
+		ED5E35D1F7D24C2C85C0EC90 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AD473450714F3892E0B35F /* SQLitePlugin.m */; };
+		CF3E851EEA6A4C7FA1610C32 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1502FACAF16C43059F544DE0 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,9 @@
 		F19C8E75249F45368F514D49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		7E8323F4CDD44F9F8CFF671D /* CDVSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSplashScreen.m"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		C4E5EC62146743E9B1A48E4C /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		17AD473450714F3892E0B35F /* SQLitePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SQLitePlugin.m"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		ABF5EC03F59042CB99DA99E5 /* SQLitePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SQLitePlugin.h"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		1502FACAF16C43059F544DE0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +164,7 @@
 				127ACE6BA6EA498BA4FC874A /* CoreLocation.framework in Frameworks */,
 				6F6CCD2BE203438A88DE3802 /* ImageIO.framework in Frameworks */,
 				B723C7D2427A4F2A8598AAF3 /* AudioToolbox.framework in Frameworks */,
+				CF3E851EEA6A4C7FA1610C32 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +242,7 @@
 				4B8380B802B943FCB19F2A52 /* CoreLocation.framework */,
 				9A5CA1E18BBC4C949201FA8E /* ImageIO.framework */,
 				F19C8E75249F45368F514D49 /* AudioToolbox.framework */,
+				1502FACAF16C43059F544DE0 /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +279,8 @@
 				F836C3FE6A75493A8BD297FA /* CDVNotification.h */,
 				7E8323F4CDD44F9F8CFF671D /* CDVSplashScreen.m */,
 				C4E5EC62146743E9B1A48E4C /* CDVSplashScreen.h */,
+				17AD473450714F3892E0B35F /* SQLitePlugin.m */,
+				ABF5EC03F59042CB99DA99E5 /* SQLitePlugin.h */,
 			);
 			name = Plugins;
 			path = "Move-A-SaurasREX/Plugins";
@@ -468,6 +477,7 @@
 				9D13DB736F7344DDBC335BFB /* CDVSound.m in Sources */,
 				75281567443E4D9990437BAD /* CDVNotification.m in Sources */,
 				7651B54D782F49C59DAB159E /* CDVSplashScreen.m in Sources */,
+				ED5E35D1F7D24C2C85C0EC90 /* SQLitePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

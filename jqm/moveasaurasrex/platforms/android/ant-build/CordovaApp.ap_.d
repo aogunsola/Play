@@ -781,12 +781,15 @@
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/jquery/images/icons-svg/user-white.svg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/jquery/images/icons-svg/video-black.svg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/jquery/images/icons-svg/video-white.svg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.media \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.media-capture \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin/www \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \

@@ -113,6 +113,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js",
+        "id": "com.brodysoft.sqlitePlugin.SQLitePlugin",
+        "clobbers": [
+            "SQLitePlugin"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -268,6 +275,7 @@ module.exports.metadata =
     "org.apache.cordova.media": "0.2.14",
     "org.apache.cordova.dialogs": "0.2.10",
     "org.apache.cordova.splashscreen": "0.3.4",
+    "com.brodysoft.sqlitePlugin": "1.0.3",
     "org.apache.cordova.file": "1.3.1"
 }
 // BOTTOM OF METADATA

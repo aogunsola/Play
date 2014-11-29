@@ -81,4 +81,10 @@
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/mediacapture/Capture.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/mediacapture/FileHelper.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$1.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$Action.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$DBQuery.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$DBRunner.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$QueryType.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/dexedLibs/classes-f9927861b19d337e6137fa2a42160a36.jar \
