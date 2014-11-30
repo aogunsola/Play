@@ -25,68 +25,20 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-        <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.css">
 
         <title>Move-A-SaurasREX</title>
         
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="SQLitePlugin.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-        <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
-        
-        <script type="text/javascript" charset="utf-8">
-            document.addEventListener("deviceready", onDeviceReady, false);
-            //var mydb;
-            
-            function onDeviceReady() {
-                alert("on device ready");
-                var mydb = window.sqlitePlugin.openDatabase({ name: "testdb" });
-                mydb.transaction(populateDB, errorCB, successDB)
-                alert("on device loaded...after db!!");
-            }
-            
-            function populateDB(tx) {
-                tx.executeSql('DROP TABLE IF EXISTS testdb');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS testdb (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT)');
-                tx.executeSql('INSERT INTO testdb (Name, Date) VALUES(?, ?)', ["my first move", "11/20/2020"]);
-                queryDB(tx);
-            }
-        
-            //function called when error occurs
-            function errorCB(err) {
-                alert("Error processing SQL: " + err.code);
-            }
-            
-            //function called when process succeeds
-            function successCB() {
-                alert("success!");
-                mydb.transaction(queryDB, errorCB);
-            }
-            
-            //select all from moves
-            function queryDB(tx) {
-                tx.executeSql('SELECT * FROM testdb', [], querySuccess, errorCB);
-                console.log("queryin...")
-            }
-            
-            function querySuccess(tx, results) {
-                var len = results.rows.length;
-                console.log("results.rows.length: " + result.rows.length + " [should be 2]");
-                
-            }
-
-        </script>
-
     </head>
-    <body>
+    <body onload="onLoad()">
         <div class="app">
-            <h1>Apache Cordova</h1>
+            
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
-
+            
+            
             <div data-role="page" id="home">  <!-- Home page -->
                 <div data-role="header">
                     <h1>My Moves</h1>
@@ -102,6 +54,8 @@
                 </div>
                 
                 <div role="main" class="ui-content">
+                    <div id="status" name="status">Status message</div>
+                    
                     <ul data-role="listview" data-inset="true">
                         <li><a href="#movelists"><img src="xx" class="ui-li-icon ui-corner-none">
                             <h2>Move 1</h2>
@@ -251,12 +205,12 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true">
-                            <label>Picture:</label>
-                            <button class="ui-btn ui-icon-camera">Add/Change Picture</button>
-                            <img src="xx">
-                                <label for="textarea-itemnotes">Notes:</label>
-                                <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
-                                </form>
+                        <label>Picture:</label>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
+                        <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
                 </div>
             </div> <!-- page end -->
 
@@ -380,6 +334,112 @@
                     </nav>
                 </footer>
             </div> <!-- page end -->
+
         </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+        var db;
+        var msg;
+        var pictureSource; // picture source
+        var destinationType; // sets the format of returned value
+            
+        // Wait for Cordova to connect with the device
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+        
+        // Cordova is ready to be used!
+        function onDeviceReady() {
+            db = window.sqlitePlugin.openDatabase({name: "moveasauras"});
+                        
+            pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.DestinationType;
+        }
+        
+        function createDB() {
+            db.transaction(function(tx) {
+                tx.executeSql('DROP TABLE IF EXISTS testdb');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS moveasauraus (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT)');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my second move", "11/20/2020")');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my first move", "8/10/2030")');
+                           
+                /*tx.executeSql('DROP TABLE IF EXISTS moves');
+                tx.executeSql('DROP TABLE IF EXISTS lists');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS moves (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, date NUMERIC, street TEXT, city TEXT, state TEXT, zip TEXT, country TEXT, notes TEXT)');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS lists (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, type INTEGER NOT NULL DEFAULT 1, picture TEXT, notes TEXT, moveid INTEGER, FOREIGN KEY(moveid) REFERENCES moves(id))');*/
+                           
+                msg = "<p>created db</p>";
+                           
+                /*tx.executeSql('INSERT INTO moves(name, date, street, city, state, zip, country) VALUES("move one", "11/29/2014", "4800 street road", "trevose", "pa", 19053", "USA")');*/
+                document.querySelector('#status').innerHTML = msg;
+                //alert("on device ready...after db created!!");
+            });
+                           
+                           
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM testdb', [], function (tx, results) {
+                        var len = results.rows.length, i;
+                        msg = "<p>found rows: " + len + "</p>";
+                        document.querySelector('#status').innerHTML += msg;
+                        for (i=0; i<len; i++) {
+                            msg = "<p><b>ID: " results.rows.item(i).id + "; data: " + results.rows.item(i).name + ", " + results.rows.item(i).date + ", " + results.rows.item(i).street + ", " + results.rows.item(i).city + ", " + results.rows.item(i).state + ", " + results.rows.item(i).zip + ", " + results.rows.item(i).country +  "</b></p>";
+                            document.querySelector('#status').innerHTML += msg;
+                        }
+                        //alert("results.rows.length: " + result.rows.length + " [should be 2]");
+                }, errorCB);
+                //alert("queryin done...");
+            });
+        }
+        
+        //function called when DB error occurs
+        function errorCB(err) {
+            alert("Error processing SQL: " + err.code);
+        }
+        
+        // Take picture using device camera and retrieve image as base64-encoded string
+        function capturePhoto() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, allowEdit : true,
+                                        destinationType: destinationType.DATA_URL });
+        }
+        
+        // Called if something bad happens.
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+        
+        function onPhotoDataSuccess(imageData) {
+            // Uncomment to view the base64 encoded image data
+            // console.log(imageData);
+            
+            // Unhide image elements
+            largeImage.style.display = 'block';
+            
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            largeImage.src = "data:image/jpeg;base64," + imageData;
+        }
+        
+        // Called when a photo is successfully retrieved
+        function onPhotoURISuccess(imageURI) {
+            // Uncomment to view the image file URI 
+            // console.log(imageURI);
+            
+            // Get image handle
+            var largeImage = document.getElementById('largeImage');
+            
+            // Unhide image elements
+            largeImage.style.display = 'block';
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            largeImage.src = imageURI;
+        }
+        </script>
+
     </body>
 </html>
