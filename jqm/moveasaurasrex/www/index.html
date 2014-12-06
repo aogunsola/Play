@@ -42,33 +42,29 @@
             <div data-role="page" id="home">  <!-- Home page -->
                 <div data-role="header">
                     <h1>Move-A-SaurasREX</h1>
-                    <a href="#popupMenu" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
-                    <div id="popupMenu" data-role="popup">
-                        <ul data-role="listview" data-inset="true">
-                            <li><a href="#movedetails">Edit move</a></li>
-                            <li><a href="#movedetails">Add new move</a></li>
-                        </ul>
-                    </div>
-                    <!--<a href="#newlist" class="ui-btn" data-icon="plus" data-transition="pop">Add</a>-->
+                    <a href="#movedetailsnew" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-transition="pop">Add</a>
                 </div>
                 
                 <div role="main" class="ui-content">
                     <!--<div id="status" name="status">Status message</div>-->
                     
                     <ul data-role="listview">
-                        <li><a href="#movelists">
-                            <h2>Move to Bridgewater NJ</h2>
+                        <li><a href="#movelists1">
+                            <h2>Move to Florida</h2>
                             <p>On: September 20, 2014</p>
-                            <p>To: 23 Parkway Street, Bridgewater, NJ 12345</p>
-                            <span class="ui-li-count">15</span></a>
+                            <p>To: 23 Parkway Street, Tampa, FL 12345</p>
+                            <span class="ui-li-count">41</span></a>
                         </li>
-                        <li><a href="#movelists">
-                            <h2>Move to Rutgers University</h2>
+                        <li><a href="#movelists2">
+                            <h2>Rutgers University Dorm</h2>
                             <p>On: January 10, 2015</p>
                             <p>To: 618 Allison Road, Piscataway, NJ 08854</p>
-                            <span class="ui-li-count">6</span></a>
+                            <span class="ui-li-count">25</span></a>
                         </li>
                     </ul>
+                    <div id="section">
+                        <img src="xxx"><p>ADVERTISING HERE</p>
+                    </div>
                 </div>
                 
                 <div data-role="footer" data-position="fixed">
@@ -83,7 +79,57 @@
                 </div>
             </div> <!-- page end -->
 
-            <div data-role="page" id="movedetails">  <!-- MoveDetails page -->
+            <div data-role="page" id="movedetails1">  <!-- MoveDetails page -->
+                <header data-role="header">
+                    <h1>Move Information</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label>Details</label>
+                        <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true" value="Move to Florida">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date" value="09/20/2014">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true" value="23 Parkway Street">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true" value="Tampa">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true" value="FL">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true" value="12345">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true" value="USA">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes">Moving for job promotion</textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movedetails2">  <!-- MoveDetails page -->
+                <header data-role="header">
+                    <h1>Move Information</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label>Details</label>
+                        <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true" value="Rutgers University Dorm">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date" value="01/10/2015">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true" value="618 Allison Road">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true" value="Piscataway">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true" value="NJ">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true" value="08854">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true" value="USA">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes">Admitted to RU. Moving to dorm in Jan 2015.</textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movedetailsnew">  <!-- MoveDetailsNew page -->
                 <header data-role="header">
                     <h1>Move Information</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
@@ -95,14 +141,16 @@
                     <form>
                         <label>Details</label>
                         <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true">
-                            <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date">
-                                <label>Moving To:</label>
-                                <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true">
-                                    <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true">
-                                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true">
-                                            <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true">
-                                                <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true">
-                                                    </form>
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes"></textarea>
+                    </form>
                 </div>
             </div> <!-- page end -->
 
@@ -127,11 +175,57 @@
             </div> <!-- page end -->
 
 
-            <div data-role="page" id="movelists">  <!-- MoveLists page -->
+            <div data-role="page" id="movelists1">  <!-- MoveLists page 1 -->
                 <header data-role="header">
                     <h1>Move Lists</h1>
                     <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
-                    <a href="#newlist" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-transition="pop">Add</a>
+                    <a href="#popupMenu1" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <div id="popupMenu1" data-role="popup">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#movedetails1">Edit move</a></li>
+                            <li><a href="#newlist">Add new list</a></li>
+                        </ul>
+                    </div>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-role="list-divider">Folders</li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
+                        <li data-role="list-divider">Checklists</li>
+                        <li><a href="#">Checklist 1</a></li>
+                        <li><a href="#">Checklist 2</a></li>
+                        <li><a href="#">Checklist 3</a></li>
+                        <li><a href="#">Checklist 4</a></li>
+                    </ul>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movelists2">  <!-- MoveLists page 2 -->
+                <header data-role="header">
+                    <h1>Move Lists</h1>
+                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#popupMenu2" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <div id="popupMenu2" data-role="popup">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#movedetails2">Edit move</a></li>
+                            <li><a href="#newlist">Add new list</a></li>
+                        </ul>
+                    </div>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -289,8 +383,10 @@
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Rate Our App</a></li>
                     </ul>
                     
-                    <p>Move-A-SaurasREX version: 1.0</p>
-                    <p> Copyright - Ayoola Ogunsola, Pamela Lai, William Karavites</p></div>
+                    <p><strong>Move-A-SaurasREX</strong></p>
+                    <p>Taking the terror out of moving<p>
+                    <p>Version: 1.0</p>
+                    <p>Copyright - Ayoola Ogunsola, Pamela Lai, William Karavites</p></div>
                 </div>
                 
                 <footer data-role="footer" data-position="fixed">
