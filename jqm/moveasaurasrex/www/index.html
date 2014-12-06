@@ -53,13 +53,13 @@
                             <h2>Move to Florida</h2>
                             <p>On: September 20, 2014</p>
                             <p>To: 23 Parkway Street, Tampa, FL 12345</p>
-                            <span class="ui-li-count">41</span></a>
+                            <span class="ui-li-count">9</span></a>
                         </li>
                         <li><a href="#movelists2">
                             <h2>Rutgers University Dorm</h2>
                             <p>On: January 10, 2015</p>
                             <p>To: 618 Allison Road, Piscataway, NJ 08854</p>
-                            <span class="ui-li-count">25</span></a>
+                            <span class="ui-li-count">8</span></a>
                         </li>
                     </ul>
                     <div id="section">
@@ -79,7 +79,7 @@
                 </div>
             </div> <!-- page end -->
 
-            <div data-role="page" id="movedetails1">  <!-- MoveDetails page -->
+            <div data-role="page" id="movedetails1">  <!-- MoveDetails page 1 (FL) -->
                 <header data-role="header">
                     <h1>Move Information</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
@@ -104,7 +104,7 @@
                 </div>
             </div> <!-- page end -->
             
-            <div data-role="page" id="movedetails2">  <!-- MoveDetails page -->
+            <div data-role="page" id="movedetails2">  <!-- MoveDetails page 2 (RU) -->
                 <header data-role="header">
                     <h1>Move Information</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
@@ -155,27 +155,7 @@
             </div> <!-- page end -->
 
 
-            <div data-role="page" id="newlist">  <!-- NewList page -->
-                <header data-role="header">
-                    <h1>New List</h1>
-                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
-                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
-                </header>
-                
-                <div role="main" class="ui-content">
-                    <form>
-                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true">
-                            <label for="flip-folder">Folder</label>
-                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder">
-                                <label for="textarea-listnotes">Notes:</label>
-                                <textarea cols="40" rows="8" name="textarea-listnotes" id="textarea-listnotes"></textarea>
-                                
-                                </form>
-                </div>
-            </div> <!-- page end -->
-
-
-            <div data-role="page" id="movelists1">  <!-- MoveLists page 1 -->
+            <div data-role="page" id="movelists1">  <!-- MoveLists page 1 (FL)-->
                 <header data-role="header">
                     <h1>Move Lists</h1>
                     <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
@@ -191,15 +171,16 @@
                 <div role="main" class="ui-content">
                     <ul data-role="listview" data-inset="true">
                         <li data-role="list-divider">Folders</li>
-                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Living Room<span class="ui-li-count">15</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">35</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - John<span class="ui-li-count">10</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Lily<span class="ui-li-count">21</span></a></a></li>
                         <li data-role="list-divider">Checklists</li>
-                        <li><a href="#">Checklist 1</a></li>
-                        <li><a href="#">Checklist 2</a></li>
-                        <li><a href="#">Checklist 3</a></li>
-                        <li><a href="#">Checklist 4</a></li>
+                        <li><a href="#viewlist1">Call friends</a></li>
+                        <li><a href="#">Stop and forward mail</a></li>
+                        <li><a href="#">Quotes from movers</a></li>
+                        <li><a href="#">Find new schools</a></li>
+                        <li><a href="#">Find new doctors</a></li>
                     </ul>
                 </div>
                 
@@ -215,7 +196,7 @@
                 </footer>
             </div> <!-- page end -->
             
-            <div data-role="page" id="movelists2">  <!-- MoveLists page 2 -->
+            <div data-role="page" id="movelists2">  <!-- MoveLists page 2 (RU)-->
                 <header data-role="header">
                     <h1>Move Lists</h1>
                     <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
@@ -231,15 +212,15 @@
                 <div role="main" class="ui-content">
                     <ul data-role="listview" data-inset="true">
                         <li data-role="list-divider">Folders</li>
-                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Folder 1<span class="ui-li-count">5</span></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 2<span class="ui-li-count">3</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 3<span class="ui-li-count">10</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Folder 4<span class="ui-li-count">25</span></a></a></li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Books<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Food<span class="ui-li-count">5</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Other<span class="ui-li-count">5</span></a></a></li>
                         <li data-role="list-divider">Checklists</li>
-                        <li><a href="#">Checklist 1</a></li>
-                        <li><a href="#">Checklist 2</a></li>
-                        <li><a href="#">Checklist 3</a></li>
-                        <li><a href="#">Checklist 4</a></li>
+                        <li><a href="#">Call BFF</a></li>
+                        <li><a href="#">Find grocery stores</a></li>
+                        <li><a href="#">Complete admission forms</a></li>
+                        <li><a href="#">Find post office</a></li>
                     </ul>
                 </div>
                 
@@ -254,9 +235,43 @@
                     </nav>
                 </footer>
             </div> <!-- page end -->
+            
 
-
-
+            <div data-role="page" id="newlist">  <!-- NewList page -->
+                <header data-role="header">
+                    <h1>New List</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true">
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder">
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-listnotes" id="textarea-listnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewlist1">  <!-- ViewList page 1 -->
+                <header data-role="header">
+                    <h1>New List</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
+                            <label for="flip-folder">Folder</label>
+                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                                <label for="textarea-listnotes">Notes:</label>
+                                <textarea cols="40" rows="20" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
+                                </form>
+                </div>
+            </div> <!-- page end -->
 
             <div data-role="page" id="newitem">  <!-- NewFolderItem page -->
                 <header data-role="header">
