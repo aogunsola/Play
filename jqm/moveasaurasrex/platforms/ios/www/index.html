@@ -25,12 +25,15 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <!--<link rel="stylesheet" href="themes/mytheme.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />-->
         <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.css">
 
         <title>Move-A-SaurasREX</title>
         
     </head>
-    <body onload="onLoad()">
+    <body>
         <div class="app">
             
             <div id="deviceready" class="blink">
@@ -54,7 +57,7 @@
                 </div>
                 
                 <div role="main" class="ui-content">
-                    <div id="status" name="status">Status message</div>
+                    <!--<div id="status" name="status">Status message</div>-->
                     
                     <ul data-role="listview" data-inset="true">
                         <li><a href="#movelists"><img src="xx" class="ui-li-icon ui-corner-none">
@@ -342,7 +345,11 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
         <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
-        
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+            
+            
         <script type="text/javascript" charset="utf-8">
         var db;
         var msg;
@@ -350,56 +357,14 @@
         var destinationType; // sets the format of returned value
             
         // Wait for Cordova to connect with the device
-        function onLoad() {
-            document.addEventListener("deviceready",onDeviceReady,false);
-        }
+        document.addEventListener("deviceready",onDeviceReady,false);
         
         // Cordova is ready to be used!
         function onDeviceReady() {
-            db = window.sqlitePlugin.openDatabase({name: "moveasauras"});
+            //db = window.sqlitePlugin.openDatabase({name: "testdb"});
                         
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
-        }
-        
-        function createDB() {
-            db.transaction(function(tx) {
-                tx.executeSql('DROP TABLE IF EXISTS testdb');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS moveasauraus (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT)');
-                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my second move", "11/20/2020")');
-                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my first move", "8/10/2030")');
-                           
-                /*tx.executeSql('DROP TABLE IF EXISTS moves');
-                tx.executeSql('DROP TABLE IF EXISTS lists');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS moves (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, date NUMERIC, street TEXT, city TEXT, state TEXT, zip TEXT, country TEXT, notes TEXT)');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS lists (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, type INTEGER NOT NULL DEFAULT 1, picture TEXT, notes TEXT, moveid INTEGER, FOREIGN KEY(moveid) REFERENCES moves(id))');*/
-                           
-                msg = "<p>created db</p>";
-                           
-                /*tx.executeSql('INSERT INTO moves(name, date, street, city, state, zip, country) VALUES("move one", "11/29/2014", "4800 street road", "trevose", "pa", 19053", "USA")');*/
-                document.querySelector('#status').innerHTML = msg;
-                //alert("on device ready...after db created!!");
-            });
-                           
-                           
-            db.transaction(function(tx) {
-                tx.executeSql('SELECT * FROM testdb', [], function (tx, results) {
-                        var len = results.rows.length, i;
-                        msg = "<p>found rows: " + len + "</p>";
-                        document.querySelector('#status').innerHTML += msg;
-                        for (i=0; i<len; i++) {
-                            msg = "<p><b>ID: " results.rows.item(i).id + "; data: " + results.rows.item(i).name + ", " + results.rows.item(i).date + ", " + results.rows.item(i).street + ", " + results.rows.item(i).city + ", " + results.rows.item(i).state + ", " + results.rows.item(i).zip + ", " + results.rows.item(i).country +  "</b></p>";
-                            document.querySelector('#status').innerHTML += msg;
-                        }
-                        //alert("results.rows.length: " + result.rows.length + " [should be 2]");
-                }, errorCB);
-                //alert("queryin done...");
-            });
-        }
-        
-        //function called when DB error occurs
-        function errorCB(err) {
-            alert("Error processing SQL: " + err.code);
         }
         
         // Take picture using device camera and retrieve image as base64-encoded string
@@ -427,7 +392,7 @@
         
         // Called when a photo is successfully retrieved
         function onPhotoURISuccess(imageURI) {
-            // Uncomment to view the image file URI 
+            // Uncomment to view the image file URI
             // console.log(imageURI);
             
             // Get image handle
@@ -439,6 +404,48 @@
             // The inline CSS rules are used to resize the image
             largeImage.src = imageURI;
         }
+
+        
+        /*function createDB() {
+            db.transaction(function(tx) {
+                tx.executeSql('DROP TABLE IF EXISTS testdb');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS testdb (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT)');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my second move", "11/20/2020")');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my first move", "8/10/2030")');
+                           
+                //tx.executeSql('DROP TABLE IF EXISTS moves');
+                //tx.executeSql('DROP TABLE IF EXISTS lists');
+                //tx.executeSql('CREATE TABLE IF NOT EXISTS moves (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, date NUMERIC, street TEXT, city TEXT, state TEXT, zip TEXT, country TEXT, notes TEXT)');
+                //tx.executeSql('CREATE TABLE IF NOT EXISTS lists (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, type INTEGER NOT NULL DEFAULT 1, picture TEXT, notes TEXT, moveid INTEGER, FOREIGN KEY(moveid) REFERENCES moves(id))');
+                           
+                msg = "<p>created db</p>";
+                           
+                //tx.executeSql('INSERT INTO moves(name, date, street, city, state, zip, country) VALUES("move one", "11/29/2014", "4800 street road", "trevose", "pa", 19053", "USA")');
+                document.querySelector('#status').innerHTML = msg;
+                //alert("on device ready...after db created!!");
+            });
+                           
+                           
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM testdb', [], function (tx, results) {
+                        var len = results.rows.length, i;
+                        msg = "<p>found rows: " + len + "</p>";
+                        document.querySelector('#status').innerHTML += msg;
+                        for (i=0; i<len; i++) {
+                            msg = "<p><b>ID: " results.rows.item(i).id + "; data: " + results.rows.item(i).name + ", " + results.rows.item(i).date + ", " + results.rows.item(i).street + ", " + results.rows.item(i).city + ", " + results.rows.item(i).state + ", " + results.rows.item(i).zip + ", " + results.rows.item(i).country +  "</b></p>";
+                            document.querySelector('#status').innerHTML += msg;
+                        }
+                        //alert("results.rows.length: " + result.rows.length + " [should be 2]");
+                }, errorCB);
+                //alert("queryin done...");
+            });
+        }
+        
+        //function called when DB error occurs
+        function errorCB(err) {
+            alert("Error processing SQL: " + err.code);
+        }*/
+        
         </script>
 
     </body>
