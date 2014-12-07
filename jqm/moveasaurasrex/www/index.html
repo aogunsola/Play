@@ -131,7 +131,7 @@
             
             <div data-role="page" id="movedetailsnew">  <!-- MoveDetailsNew page -->
                 <header data-role="header">
-                    <h1>Move Information</h1>
+                    <h1>New Move Information</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                     <!-- <input type="submit" id="doneButton" value="Done"> -->
@@ -163,7 +163,7 @@
                     <div id="popupMenu1" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails1">Edit move</a></li>
-                            <li><a href="#newlist">Add new list</a></li>
+                            <li><a href="#newitem">Add new item</a></li>
                         </ul>
                     </div>
                 </header>
@@ -204,7 +204,7 @@
                     <div id="popupMenu2" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails2">Edit move</a></li>
-                            <li><a href="#newlist">Add new list</a></li>
+                            <li><a href="#newitem">Add new item</a></li>
                         </ul>
                     </div>
                 </header>
@@ -217,7 +217,7 @@
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Food<span class="ui-li-count">5</span></a></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Other<span class="ui-li-count">5</span></a></a></li>
                         <li data-role="list-divider">Checklists</li>
-                        <li><a href="#">Call BFF</a></li>
+                        <li><a href="#viewlist2">Call BFF</a></li>
                         <li><a href="#">Find grocery stores</a></li>
                         <li><a href="#">Complete admission forms</a></li>
                         <li><a href="#">Find post office</a></li>
@@ -237,27 +237,27 @@
             </div> <!-- page end -->
             
 
-            <div data-role="page" id="newlist">  <!-- NewList page -->
+            <div data-role="page" id="newitem">  <!-- NewItem page -->
                 <header data-role="header">
-                    <h1>New List</h1>
+                    <h1>New Item</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true">
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name" data-clear-btn="true">
                         <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder">
-                        <label for="textarea-listnotes">Notes:</label>
-                        <textarea cols="40" rows="20" name="textarea-listnotes" id="textarea-listnotes"></textarea>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes">
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                     </form>
                 </div>
             </div> <!-- page end -->
             
             <div data-role="page" id="viewlist1">  <!-- ViewList page 1 -->
                 <header data-role="header">
-                    <h1>New List</h1>
+                    <h1>List Item</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
@@ -268,21 +268,39 @@
                             <label for="flip-folder">Folder</label>
                             <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
                                 <label for="textarea-listnotes">Notes:</label>
-                                <textarea cols="40" rows="20" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
+                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
                                 </form>
                 </div>
             </div> <!-- page end -->
-
-            <div data-role="page" id="newitem">  <!-- NewFolderItem page -->
+            
+            <div data-role="page" id="viewlist2">  <!-- ViewList page 2 -->
                 <header data-role="header">
-                    <h1>New Item</h1>
+                    <h1>List Item</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true">
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
+                            <label for="flip-folder">Folder</label>
+                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                                <label for="textarea-listnotes">Notes:</label>
+                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
+                                </form>
+                </div>
+            </div> <!-- page end -->
+
+            <div data-role="page" id="newfolderitem">  <!-- NewFolderItem page -->
+                <header data-role="header">
+                    <h1>New Folder Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
                         <label>Picture:</label>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
                         <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
@@ -297,12 +315,16 @@
                 <header data-role="header">
                     <h1>Folder View</h1>
                     <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
-                    <a href="#newitem" class="ui-btn-right" data-icon="plus" data-iconpos="notext">Add</a>
+                    <a href="#newfolderitem" class="ui-btn-right" data-icon="plus" data-iconpos="notext">Add</a>
                 </header>
                 
                 <div role="main" class="ui-content">
+                    <p> Folder: XXX<br>
+                    Notes: xxxx<br></p>
+                    <p> Contents:</p>
+                    
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 1</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#viewfolderitem"><img src="xx"><p>Item 1</p></a></div></div>
                         <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
                         <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
                         <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
@@ -311,9 +333,6 @@
                         <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
                         <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
                         <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 10</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 11</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 12</p></a></div></div>
                     </div>
                 </div>
                 
@@ -327,6 +346,25 @@
                         </ul>
                     </nav>
                 </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolderitem">  <!-- ViewFolderItem page -->
+                <header data-role="header">
+                    <h1>Folder Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
+                            <label>Picture:</label>
+                            <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                            <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
+                            <label for="textarea-itemnotes">Notes:</label>
+                            <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                            </form>
+                </div>
             </div> <!-- page end -->
 
 
@@ -392,17 +430,16 @@
                 </header>
                 
                 <div role="main" class="ui-content">
+                    <p><strong>Move-A-SaurasREX</strong></p>
+                    <p><i>Taking the terror out of moving</i><p>
+                    <p>Version: 1.0</p>
+                    <p>Copyright &copy;, Ayoola Ogunsola, Pamela Lai, William Karavites</p>
+                        
                     <ul data-role="listview" data-inset="true">
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Review Help topics</a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Delete all data</a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Rate Our App</a></li>
                     </ul>
-                    
-                    <p><strong>Move-A-SaurasREX</strong></p>
-                    <p>Taking the terror out of moving<p>
-                    <p>Version: 1.0</p>
-                    <p>Copyright - Ayoola Ogunsola, Pamela Lai, William Karavites</p></div>
-                </div>
                 
                 <footer data-role="footer" data-position="fixed">
                     <nav data-role="navbar">
