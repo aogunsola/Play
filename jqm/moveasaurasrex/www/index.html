@@ -382,7 +382,7 @@
                     <button class="ui-btn" onclick="getUserLocation();">Search</button>
                     
                     <p>Results:</p>
-                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=east windsor, nj&zoom=11&size=200x200&markers=shoprite, east windsor, nj">
+                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=300x200">
                     
                     <ul data-role="listview">
                         <li><a href="#">
@@ -561,11 +561,13 @@
 
                                                      
        var locationSuccess = function(position) {
-                        alert(position.coords.latitude + "\n" + position.coords.longitude);
+                        //alert(position.coords.latitude + "\n" + position.coords.longitude);
+                        latlon = position.coords.latitude + ',' + position.coords.longitude;
+                        $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + latlon + '&zoom=11&size=300x200')
         };
         
         function locationError(error) {
-            alert("did not work");
+            alert("Unable to get current location");
         }
         
         
