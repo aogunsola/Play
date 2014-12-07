@@ -81,7 +81,7 @@
 
             <div data-role="page" id="movedetails1">  <!-- MoveDetails page 1 (FL) -->
                 <header data-role="header">
-                    <h1>Move Information</h1>
+                    <h1>Move Info</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
                     <!-- <input type="submit" id="doneButton" value="Done"> -->
@@ -106,7 +106,7 @@
             
             <div data-role="page" id="movedetails2">  <!-- MoveDetails page 2 (RU) -->
                 <header data-role="header">
-                    <h1>Move Information</h1>
+                    <h1>Move Info</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
                     <!-- <input type="submit" id="doneButton" value="Done"> -->
@@ -131,7 +131,7 @@
             
             <div data-role="page" id="movedetailsnew">  <!-- MoveDetailsNew page -->
                 <header data-role="header">
-                    <h1>New Move Information</h1>
+                    <h1>New Move</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
                     <!-- <input type="submit" id="doneButton" value="Done"> -->
@@ -179,6 +179,7 @@
                         <li><a href="#viewlist1">Call friends</a></li>
                         <li><a href="#">Stop and forward mail</a></li>
                         <li><a href="#">Quotes from movers</a></li>
+                        <li data-role="list-divider" data-theme="c">COMPLETED</li>
                         <li><a href="#">Find new schools</a></li>
                         <li><a href="#">Find new doctors</a></li>
                     </ul>
@@ -219,6 +220,7 @@
                         <li data-role="list-divider">Checklists</li>
                         <li><a href="#viewlist2">Call BFF</a></li>
                         <li><a href="#">Find grocery stores</a></li>
+                        <li data-role="list-divider" data-theme="c">COMPLETED</li>
                         <li><a href="#">Complete admission forms</a></li>
                         <li><a href="#">Find post office</a></li>
                     </ul>
@@ -265,11 +267,12 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
-                            <label for="flip-folder">Folder</label>
-                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
-                                <label for="textarea-listnotes">Notes:</label>
-                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
-                                </form>
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
+                        <label><input type="checkbox">Completed</label>
+                        </form>
                 </div>
             </div> <!-- page end -->
             
@@ -283,17 +286,18 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
-                            <label for="flip-folder">Folder</label>
-                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
-                                <label for="textarea-listnotes">Notes:</label>
-                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
-                                </form>
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
+                        <label><input type="checkbox">Completed</label>
+                    </form>
                 </div>
             </div> <!-- page end -->
 
             <div data-role="page" id="newfolderitem">  <!-- NewFolderItem page -->
                 <header data-role="header">
-                    <h1>New Folder Item</h1>
+                    <h1>New Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
                 </header>
@@ -313,7 +317,7 @@
 
             <div data-role="page" id="viewfolder">  <!-- ViewFolder page (Living Rm)-->
                 <header data-role="header">
-                    <h1>Folder View</h1>
+                    <h1>Folder</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
                 </header>
@@ -434,10 +438,11 @@
                 
                 <div role="main" class="ui-content">
                     <ul data-role="listview" data-inset="true">
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Print all items</a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Share via Email</a></li>
-                        <p> display more info here??</p>
+                        <li><a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">Print all items</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-user ui-btn-icon-left">Share via Email</a></li>
                     </ul>
+                    
+                    <p>ADVERTISING HERE</p>
                 </div>
                 
                 <footer data-role="footer" data-position="fixed">
