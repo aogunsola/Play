@@ -171,10 +171,10 @@
                 <div role="main" class="ui-content">
                     <ul data-role="listview">
                         <li data-role="list-divider">Folders</li>
-                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Living Room<span class="ui-li-count">15</span></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">35</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - John<span class="ui-li-count">10</span></a></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Lily<span class="ui-li-count">21</span></a></a></li>
+                        <li><a href="#viewfolder1"><img src="xx" class="ui-li-icon ui-corner-none">Living Room<span class="ui-li-count">6</span></a></li>
+                        <li><a href="#viewfolder3"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Lily<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">5</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - John<span class="ui-li-count">8</span></a></a></li>
                         <li data-role="list-divider">Checklists</li>
                         <li><a href="#viewlist1">Call friends</a></li>
                         <li><a href="#">Stop and forward mail</a></li>
@@ -213,8 +213,8 @@
                 <div role="main" class="ui-content">
                     <ul data-role="listview">
                         <li data-role="list-divider">Folders</li>
-                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Books<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#viewfolder2"><img src="xx" class="ui-li-icon ui-corner-none">Books<span class="ui-li-count">1</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Food<span class="ui-li-count">5</span></a></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Other<span class="ui-li-count">5</span></a></a></li>
                         <li data-role="list-divider">Checklists</li>
@@ -248,11 +248,11 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name" data-clear-btn="true">
+                        <input type="text" name="text-newitemname" id="text-newitemname" placeholder="Item Name" data-clear-btn="true">
                         <label for="flip-folder">Folder</label>
                         <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes">
-                        <label for="textarea-itemnotes">Notes:</label>
-                        <textarea cols="40" rows="60" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                        <label for="textarea-newitemnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-newitemnotes" id="textarea-newitemnotes"></textarea>
                     </form>
                 </div>
             </div> <!-- page end -->
@@ -268,7 +268,7 @@
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
                         <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -287,7 +287,7 @@
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
                         <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -304,7 +304,7 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true">
                         <label>Picture:</label>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
                         <img style="display:none;width:100%;" id="image1" src="" /> <br>
@@ -315,7 +315,7 @@
             </div> <!-- page end -->
 
 
-            <div data-role="page" id="viewfolder">  <!-- ViewFolder page (Living Rm)-->
+            <div data-role="page" id="viewfolder1">  <!-- ViewFolder page 1 (Living Rm)-->
                 <header data-role="header">
                     <h1>Folder</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
@@ -323,20 +323,21 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <p> Folder: Living Room<br>
-                    Notes: Boxes for living room<br>
-                    Contents:</p>
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Living Room">
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" value="on" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Notes: Boxes for living room</textarea>
+                    </form>
                     
-                    <div class="ui-grid-b">
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#viewfolderitem"><img src="xx"><br>TV</a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>DVDs</a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Books</a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Magazines</a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Decorations</a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Pictures</a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Speakers</a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Pillows</a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Rugs</a></div></div>
+                    <div class="ui-grid-b ui-responsive">
+                        <div class="ui-bar"><a href="#viewfolderitem1"><img src="img/tv.jpg" style="width:50px;height:50px"><br>TV</a></div>
+                        <div class="ui-bar"><a href="#viewfolderitem2"><img src="img/pianoseat.jpg" style="width:50px;height:50px"><br>Piano seat</a></div>
+                        <div class="ui-bar"><a href="#viewfolderitem3"><img src="img/books.jpg" style="width:50px;height:50px"><br>Magazines</a></div>
+                        <div class="ui-bar"><a href="#"><img src="img/soundsystem.jpg" style="width:50px;height:50px"><br>Sound system</a></div>
+                        <div class="ui-bar"><a href="#"><img src="img/speakers.jpg" style="width:50px;height:50px"><br>Speakers</a></div>
+                        <div class="ui-bar"><a href="#"><img src="img/pillows.jpg" style="width:50px;height:50px"><br>Pillows</a></div>
                     </div>
                 </div>
                 
@@ -352,7 +353,65 @@
                 </footer>
             </div> <!-- page end -->
             
-            <div data-role="page" id="viewfolderitem">  <!-- ViewFolderItem page -->
+            <div data-role="page" id="viewfolder2">  <!-- ViewFolder page 2 (Books)-->
+                <header data-role="header">
+                    <h1>Folder</h1>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <p> Folder: Books<br>
+                    Notes: From book shelves<br></p>
+                    
+                    <div class="ui-grid-b ui-responsive">
+                        <div class="ui-bar"><a href="#viewfolderitem3"><img src="img/books.jpg" style="width:50px;height:50px"><br>Shelf 1</a></div>
+                    </div>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#info" data-icon="gear">Info</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolder3">  <!-- ViewFolder page 3 (Bedroom-Lily)-->
+                <header data-role="header">
+                    <h1>Folder</h1>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <p> Folder: Bedroom - Lily<br>
+                    Notes: Boxes for Lily's bedroom<br></p>
+                    
+                    <div class="ui-grid-b ui-responsive">
+                        <div class="ui-bar"><a href="#viewfolderitem3"><img src="img/books.jpg" style="width:50px;height:50px"><br>Books</a></div>
+                        <div class="ui-bar"><a href="#viewfolderitem4"><img src="img/stuffedanimals.jpg" style="width:50px;height:50px"><br>Stuffed animals</a></div>
+                        <div class="ui-bar"><a href="#"><img src="img/dolls.jpg" style="width:50px;height:50px"><br>Dolls</a></div>
+                    </div>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#info" data-icon="gear">Info</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolderitem1">  <!-- ViewFolderItem page 1 -->
                 <header data-role="header">
                     <h1>Folder Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
@@ -362,12 +421,66 @@
                 <div role="main" class="ui-content">
                     <form>
                         <p>Item: TV</p>
-                            <label>Picture:</label>
-                            <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
-                            <img id="image1" style="display:none;width:100%;" src="" /> <br>
-                            <label for="textarea-itemnotes">Notes:</label>
-                            <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
-                            </form>
+                        <img id="image1" src="img/tv.jpg" style="width:300px;height:200px"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolderitem2">  <!-- ViewFolderItem page  2-->
+                <header data-role="header">
+                    <h1>Folder Item</h1>
+                    <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <p>Item: Piano Seat</p>
+                        <img id="image1" src="img/pianoseat.jpg" style="width:400px;height:300px"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                        </form>
+                </div>
+            </div> <!-- page end -->
+            
+            
+            <div data-role="page" id="viewfolderitem3">  <!-- ViewFolderItem page 3 -->
+                <header data-role="header">
+                    <h1>Folder Item</h1>
+                    <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <p>Item: Books</p>
+                        <img id="image1" src="img/books.jpg" style="width:400px;height:300px"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolderitem4">  <!-- ViewFolderItem page 4 -->
+                <header data-role="header">
+                    <h1>Folder Item</h1>
+                    <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <p>Item: Stuffed animals</p>
+                        <img id="image1" src="img/stuffedanimals.jpg" style="width:400px;height:300px"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
                 </div>
             </div> <!-- page end -->
 
@@ -468,7 +581,7 @@
                     <p><strong>Move-A-SaurasREX</strong><br>
                     Taking the terror out of moving<p>
                     <p>Version: 1.0</p>
-                    <p>Copyright &copy;<br>
+                    <p>Creators:<br>
                     Ayoola Ogunsola, Pamela Lai, William Karavites</p>
                     
                     <br>
