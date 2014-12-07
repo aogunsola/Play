@@ -303,7 +303,7 @@
                         <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
                         <label>Picture:</label>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
-                        <img style="display:none;width:100%;" id="smallImage" src="" /> <br>
+                        <img style="display:none;width:100%;" id="image1" src="" /> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                     </form>
@@ -311,7 +311,7 @@
             </div> <!-- page end -->
 
 
-            <div data-role="page" id="viewfolder">  <!-- ViewFolder page -->
+            <div data-role="page" id="viewfolder">  <!-- ViewFolder page (Living Rm)-->
                 <header data-role="header">
                     <h1>Folder View</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
@@ -319,20 +319,20 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <p> Folder: XXX<br>
-                    Notes: xxxx<br></p>
-                    <p> Contents:</p>
+                    <p> Folder: Living Room<br>
+                    Notes: Boxes for living room<br>
+                    Contents:</p>
                     
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#viewfolderitem"><img src="xx"><p>Item 1</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 5</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 6</p></a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#viewfolderitem"><img src="xx"><br>TV</a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>DVDs</a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Books</a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Magazines</a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Decorations</a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Pictures</a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Speakers</a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Pillows</a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><br>Rugs</a></div></div>
                     </div>
                 </div>
                 
@@ -357,10 +357,10 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
+                        <p>Item: TV</p>
                             <label>Picture:</label>
                             <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
-                            <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
+                            <img id="image1" style="display:none;width:100%;" src="" /> <br>
                             <label for="textarea-itemnotes">Notes:</label>
                             <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                             </form>
@@ -379,10 +379,10 @@
                         <input type="search" name="text-search" id="text-search" placeholder="Search locations">
                         <!--<input type="text" name="text-distance" id="text-distance" data-clear-btn="true" placeholder="Distance (in miles):">-->
                     </form>
-                    <button class="ui-btn" onclick="getUserLocation();">Search</button>
+                    <button class="ui-btn ui-icon-search ui-btn-icon-notext" onclick="getUserLocation();">Search</button>
                     
                     <p>Results:</p>
-                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=300x200">
+                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=piscataway, nj&zoom=11&size=200x200">
                     
                     <ul data-role="listview">
                         <li><a href="#">
@@ -520,6 +520,7 @@
             navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
                                         quality: 50, allowEdit : true, destinationType: destinationType.DATA_URL
                                         });
+            $('#image1').attr('src', smallImage)
         }
         
         // Called if something bad happens.
@@ -563,7 +564,7 @@
        var locationSuccess = function(position) {
                         //alert(position.coords.latitude + "\n" + position.coords.longitude);
                         latlon = position.coords.latitude + ',' + position.coords.longitude;
-                        $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + latlon + '&zoom=11&size=300x200')
+                        $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + latlon + '&zoom=11&size=200x200')
         };
         
         function locationError(error) {
