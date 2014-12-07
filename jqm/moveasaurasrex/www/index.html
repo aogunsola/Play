@@ -33,16 +33,16 @@
     <body>
         <div class="app">
             
-            <div id="deviceready" class="blink">
+            <!--<div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-            </div>
+            </div>-->
             
             
             <div data-role="page" id="home">  <!-- Home page -->
                 <div data-role="header">
                     <h1>Move-A-SaurasREX</h1>
-                    <a href="#movedetailsnew" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-transition="pop">Add</a>
+                    <a href="#movedetailsnew" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext" data-transition="pop">Add</a>
                 </div>
                 
                 <div role="main" class="ui-content">
@@ -158,8 +158,8 @@
             <div data-role="page" id="movelists1">  <!-- MoveLists page 1 (FL)-->
                 <header data-role="header">
                     <h1>Move Lists</h1>
-                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
-                    <a href="#popupMenu1" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#popupMenu1" class="ui-btn-right ui-nodisc-icon" data-icon="action" data-theme="b" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
                     <div id="popupMenu1" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails1">Edit move</a></li>
@@ -169,7 +169,7 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <ul data-role="listview" data-inset="true">
+                    <ul data-role="listview">
                         <li data-role="list-divider">Folders</li>
                         <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Living Room<span class="ui-li-count">15</span></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">35</span></a></a></li>
@@ -199,8 +199,8 @@
             <div data-role="page" id="movelists2">  <!-- MoveLists page 2 (RU)-->
                 <header data-role="header">
                     <h1>Move Lists</h1>
-                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
-                    <a href="#popupMenu2" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#popupMenu2" class="ui-btn-right ui-nodisc-icon" data-icon="action" data-theme="b" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
                     <div id="popupMenu2" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails2">Edit move</a></li>
@@ -210,7 +210,7 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <ul data-role="listview" data-inset="true">
+                    <ul data-role="listview">
                         <li data-role="list-divider">Folders</li>
                         <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Books<span class="ui-li-count">3</span></a></a></li>
@@ -303,7 +303,7 @@
                         <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
                         <label>Picture:</label>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
-                        <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
+                        <img style="display:none;width:100%;" id="smallImage" src="" /> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                     </form>
@@ -314,8 +314,8 @@
             <div data-role="page" id="viewfolder">  <!-- ViewFolder page -->
                 <header data-role="header">
                     <h1>Folder View</h1>
-                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
-                    <a href="#newfolderitem" class="ui-btn-right" data-icon="plus" data-iconpos="notext">Add</a>
+                    <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -324,15 +324,15 @@
                     <p> Contents:</p>
                     
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#viewfolderitem"><img src="xx"><p>Item 1</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 5</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 6</p></a></div></div>
-                        <div class="ui-block-a"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
-                        <div class="ui-block-b"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
-                        <div class="ui-block-c"><div class="ui-bar ui-bar-a"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#viewfolderitem"><img src="xx"><p>Item 1</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 5</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 6</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
                     </div>
                 </div>
                 
@@ -371,7 +371,7 @@
             <div data-role="page" id="search">  <!-- Search page -->
                 <header data-role="header">
                     <h1>Search</h1>
-                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                    <a href="#" class="ui-btn ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -399,7 +399,7 @@
             <div data-role="page" id="share">  <!-- Share page -->
                 <header data-role="header">
                     <h1>Share Data</h1>
-                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                    <a href="#" class="ui-btn ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -426,7 +426,7 @@
             <div data-role="page" id="tools">  <!-- Tools page -->
                 <header data-role="header">
                     <h1>Tools</h1>
-                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                    <a href="#" class="ui-btn ui-nodisc-icon" data-icon="carat-l" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                 </header>
                 
                 <div role="main" class="ui-content">
@@ -437,7 +437,6 @@
                         
                     <ul data-role="listview" data-inset="true">
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Review Help topics</a></li>
-                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Delete all data</a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Rate Our App</a></li>
                     </ul>
                 
@@ -480,12 +479,14 @@
                         
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
+            
         }
         
         // Take picture using device camera and retrieve image as base64-encoded string
         function capturePhoto() {
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, allowEdit : true,
-                                        destinationType: destinationType.DATA_URL });
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+                                        quality: 50, allowEdit : true, destinationType: destinationType.DATA_URL
+                                        });
         }
         
         // Called if something bad happens.
@@ -493,16 +494,20 @@
             alert('Failed because: ' + message);
         }
         
+        // Called when a photo is successfully retrieved
         function onPhotoDataSuccess(imageData) {
             // Uncomment to view the base64 encoded image data
             // console.log(imageData);
             
+            // Get image handle
+            var smallImage = document.getElementById('smallImage');
+            
             // Unhide image elements
-            largeImage.style.display = 'block';
+            smallImage.style.display = 'block';
             
             // Show the captured photo
             // The inline CSS rules are used to resize the image
-            largeImage.src = "data:image/jpeg;base64," + imageData;
+            smallImage.src = "data:image/jpeg;base64," + imageData;
         }
         
         // Called when a photo is successfully retrieved
@@ -515,6 +520,7 @@
             
             // Unhide image elements
             largeImage.style.display = 'block';
+            
             // Show the captured photo
             // The inline CSS rules are used to resize the image
             largeImage.src = imageURI;
