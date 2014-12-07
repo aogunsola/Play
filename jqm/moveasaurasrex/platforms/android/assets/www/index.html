@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.css">
+
+        <title>Move-A-SaurasREX</title>
+        
+    </head>
+    <body>
+        <div class="app">
+            
+            <!--<div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>-->
+            
+            
+            <div data-role="page" id="home">  <!-- Home page -->
+                <div data-role="header">
+                    <h1>Move-A-SaurasREX</h1>
+                    <a href="#movedetailsnew" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-transition="pop">Add</a>
+                </div>
+                
+                <div role="main" class="ui-content">
+                    <!--<div id="status" name="status">Status message</div>-->
+                    
+                    <ul data-role="listview">
+                        <li><a href="#movelists1">
+                            <h2>Move to Florida</h2>
+                            <p>On: September 20, 2014</p>
+                            <p>To: 23 Parkway Street, Tampa, FL 12345</p>
+                            <span class="ui-li-count">9</span></a>
+                        </li>
+                        <li><a href="#movelists2">
+                            <h2>Rutgers University Dorm</h2>
+                            <p>On: January 10, 2015</p>
+                            <p>To: 618 Allison Road, Piscataway, NJ 08854</p>
+                            <span class="ui-li-count">8</span></a>
+                        </li>
+                    </ul>
+                    <div id="section">
+                        <img src="xxx"><p>ADVERTISING HERE</p>
+                    </div>
+                </div>
+                
+                <div data-role="footer" data-position="fixed">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- page end -->
+
+            <div data-role="page" id="movedetails1">  <!-- MoveDetails page 1 (FL) -->
+                <header data-role="header">
+                    <h1>Move Information</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label>Details</label>
+                        <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true" value="Move to Florida">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date" value="09/20/2014">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true" value="23 Parkway Street">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true" value="Tampa">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true" value="FL">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true" value="12345">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true" value="USA">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes">Moving for job promotion</textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movedetails2">  <!-- MoveDetails page 2 (RU) -->
+                <header data-role="header">
+                    <h1>Move Information</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label>Details</label>
+                        <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true" value="Rutgers University Dorm">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date" value="01/10/2015">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true" value="618 Allison Road">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true" value="Piscataway">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true" value="NJ">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true" value="08854">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true" value="USA">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes">Admitted to RU. Moving to dorm in Jan 2015.</textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movedetailsnew">  <!-- MoveDetailsNew page -->
+                <header data-role="header">
+                    <h1>New Move Information</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                    <!-- <input type="submit" id="doneButton" value="Done"> -->
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <label>Details</label>
+                        <input type="text" name="text-movename" id="text-movename" placeholder="Move Name" data-clear-btn="true">
+                        <input type="date" name="date-movedate" id="text-movedate" placeholder="Move Date">
+                        <label>Moving To:</label>
+                        <input type="text" name="text-street" id="text-street" placeholder="Street" data-clear-btn="true">
+                        <input type="text" name="text-city" id="text-city" placeholder="City" data-clear-btn="true">
+                        <input type="text" name="text-state" id="text-state" placeholder="State" data-clear-btn="true">
+                        <input type="text" name="text-zip" id="text-zip" placeholder="Zip Code" data-clear-btn="true">
+                        <input type="text" name="text-country" id="text-country" placeholder="Country" data-clear-btn="true">
+                        <label for="textarea-movenotes">Notes:</label>
+                        <textarea cols="40" rows="8" name="textarea-movenotes" id="textarea-movenotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+
+
+            <div data-role="page" id="movelists1">  <!-- MoveLists page 1 (FL)-->
+                <header data-role="header">
+                    <h1>Move Lists</h1>
+                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#popupMenu1" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <div id="popupMenu1" data-role="popup">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#movedetails1">Edit move</a></li>
+                            <li><a href="#newitem">Add new item</a></li>
+                        </ul>
+                    </div>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <ul data-role="listview">
+                        <li data-role="list-divider">Folders</li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Living Room<span class="ui-li-count">15</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">35</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - John<span class="ui-li-count">10</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Lily<span class="ui-li-count">21</span></a></a></li>
+                        <li data-role="list-divider">Checklists</li>
+                        <li><a href="#viewlist1">Call friends</a></li>
+                        <li><a href="#">Stop and forward mail</a></li>
+                        <li><a href="#">Quotes from movers</a></li>
+                        <li><a href="#">Find new schools</a></li>
+                        <li><a href="#">Find new doctors</a></li>
+                    </ul>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="movelists2">  <!-- MoveLists page 2 (RU)-->
+                <header data-role="header">
+                    <h1>Move Lists</h1>
+                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#popupMenu2" class="ui-btn-right" data-icon="plus" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
+                    <div id="popupMenu2" data-role="popup">
+                        <ul data-role="listview" data-inset="true">
+                            <li><a href="#movedetails2">Edit move</a></li>
+                            <li><a href="#newitem">Add new item</a></li>
+                        </ul>
+                    </div>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <ul data-role="listview">
+                        <li data-role="list-divider">Folders</li>
+                        <li><a href="#viewfolder"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Books<span class="ui-li-count">3</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Food<span class="ui-li-count">5</span></a></a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Other<span class="ui-li-count">5</span></a></a></li>
+                        <li data-role="list-divider">Checklists</li>
+                        <li><a href="#viewlist2">Call BFF</a></li>
+                        <li><a href="#">Find grocery stores</a></li>
+                        <li><a href="#">Complete admission forms</a></li>
+                        <li><a href="#">Find post office</a></li>
+                    </ul>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+
+            <div data-role="page" id="newitem">  <!-- NewItem page -->
+                <header data-role="header">
+                    <h1>New Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name" data-clear-btn="true">
+                        <label for="flip-folder">Folder</label>
+                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes">
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewlist1">  <!-- ViewList page 1 -->
+                <header data-role="header">
+                    <h1>List Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
+                            <label for="flip-folder">Folder</label>
+                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                                <label for="textarea-listnotes">Notes:</label>
+                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
+                                </form>
+                </div>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewlist2">  <!-- ViewList page 2 -->
+                <header data-role="header">
+                    <h1>List Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
+                            <label for="flip-folder">Folder</label>
+                            <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" disabled="disabled">
+                                <label for="textarea-listnotes">Notes:</label>
+                                <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
+                                </form>
+                </div>
+            </div> <!-- page end -->
+
+            <div data-role="page" id="newfolderitem">  <!-- NewFolderItem page -->
+                <header data-role="header">
+                    <h1>New Folder Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
+                        <label>Picture:</label>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
+                        <img style="display:none;width:100%;" id="smallImage" src="" /> <br>
+                        <label for="textarea-itemnotes">Notes:</label>
+                        <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                    </form>
+                </div>
+            </div> <!-- page end -->
+
+
+            <div data-role="page" id="viewfolder">  <!-- ViewFolder page -->
+                <header data-role="header">
+                    <h1>Folder View</h1>
+                    <a href="#" class="ui-btn-left" data-icon="carat-l" data-iconpos="notext" data-rel="back">Back</a>
+                    <a href="#newfolderitem" class="ui-btn-right" data-icon="plus" data-iconpos="notext">Add</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <p> Folder: XXX<br>
+                    Notes: xxxx<br></p>
+                    <p> Contents:</p>
+                    
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#viewfolderitem"><img src="xx"><p>Item 1</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 2</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 3</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 4</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 5</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 6</p></a></div></div>
+                        <div class="ui-block-a"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 7</p></a></div></div>
+                        <div class="ui-block-b"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 8</p></a></div></div>
+                        <div class="ui-block-c"><div class="ui-bar ui-bar-c"><a href="#"><img src="xx"><p>Item 9</p></a></div></div>
+                    </div>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+            
+            <div data-role="page" id="viewfolderitem">  <!-- ViewFolderItem page -->
+                <header data-role="header">
+                    <h1>Folder Item</h1>
+                    <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
+                    <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" disabled="disabled">
+                            <label>Picture:</label>
+                            <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                            <img style="display:none;width:100%;" id="largeImage" src="" /> <br>
+                            <label for="textarea-itemnotes">Notes:</label>
+                            <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
+                            </form>
+                </div>
+            </div> <!-- page end -->
+
+
+            <div data-role="page" id="search">  <!-- Search page -->
+                <header data-role="header">
+                    <h1>Search</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <form>
+                        <input type="search" name="text-search" id="text-search" placeholder="Search locations">
+                            <label for="text-distance">Distance (in miles):</label>
+                            <input type="text" name="text-distance" id="text-distance" data-clear-btn="true">
+                                </form>
+                    <p>Results</p>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+
+
+            <div data-role="page" id="share">  <!-- Share page -->
+                <header data-role="header">
+                    <h1>Share Data</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Print all items</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Share via Email</a></li>
+                        <p> display more info here??</p>
+                    </ul>
+                </div>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#" data-icon="action">Share</a></li>
+                            <li><a href="#tools" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+
+
+            <div data-role="page" id="tools">  <!-- Tools page -->
+                <header data-role="header">
+                    <h1>Tools</h1>
+                    <a href="#" class="ui-btn" data-icon="carat-l" data-rel="back">Back</a>
+                </header>
+                
+                <div role="main" class="ui-content">
+                    <p><strong>Move-A-SaurasREX</strong></p>
+                    <p><i>Taking the terror out of moving</i><p>
+                    <p>Version: 1.0</p>
+                    <p>Copyright &copy;, Ayoola Ogunsola, Pamela Lai, William Karavites</p>
+                        
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Review Help topics</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Delete all data</a></li>
+                        <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Rate Our App</a></li>
+                    </ul>
+                
+                <footer data-role="footer" data-position="fixed">
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#home" data-icon="home">Home</a></li>
+                            <li><a href="#search" data-icon="search">Search</a></li>
+                            <li><a href="#share" data-icon="action">Share</a></li>
+                            <li><a href="#" data-icon="gear">Tools</a></li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div> <!-- page end -->
+
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="SQLitePlugin.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+            
+            
+        <script type="text/javascript" charset="utf-8">
+        var db;
+        var msg;
+        var pictureSource; // picture source
+        var destinationType; // sets the format of returned value
+            
+        // Wait for Cordova to connect with the device
+        document.addEventListener("deviceready",onDeviceReady,false);
+        
+        // Cordova is ready to be used!
+        function onDeviceReady() {
+            //db = window.sqlitePlugin.openDatabase({name: "testdb"});
+                        
+            pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.DestinationType;
+            
+            navigator.splashscreen.hide();
+        }
+        
+        // Take picture using device camera and retrieve image as base64-encoded string
+        function capturePhoto() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+                                        quality: 50, allowEdit : true, destinationType: destinationType.DATA_URL
+                                        });
+        }
+        
+        // Called if something bad happens.
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+        
+        // Called when a photo is successfully retrieved
+        function onPhotoDataSuccess(imageData) {
+            // Uncomment to view the base64 encoded image data
+            // console.log(imageData);
+            
+            // Get image handle
+            var smallImage = document.getElementById('smallImage');
+            
+            // Unhide image elements
+            smallImage.style.display = 'block';
+            
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            smallImage.src = "data:image/jpeg;base64," + imageData;
+        }
+        
+        // Called when a photo is successfully retrieved
+        function onPhotoURISuccess(imageURI) {
+            // Uncomment to view the image file URI
+            // console.log(imageURI);
+            
+            // Get image handle
+            var largeImage = document.getElementById('largeImage');
+            
+            // Unhide image elements
+            largeImage.style.display = 'block';
+            
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            largeImage.src = imageURI;
+        }
+
+        
+        /*function createDB() {
+            db.transaction(function(tx) {
+                tx.executeSql('DROP TABLE IF EXISTS testdb');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS testdb (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT)');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my second move", "11/20/2020")');
+                tx.executeSql('INSERT INTO testdb (name, date) VALUES("my first move", "8/10/2030")');
+                           
+                //tx.executeSql('DROP TABLE IF EXISTS moves');
+                //tx.executeSql('DROP TABLE IF EXISTS lists');
+                //tx.executeSql('CREATE TABLE IF NOT EXISTS moves (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, date NUMERIC, street TEXT, city TEXT, state TEXT, zip TEXT, country TEXT, notes TEXT)');
+                //tx.executeSql('CREATE TABLE IF NOT EXISTS lists (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT, type INTEGER NOT NULL DEFAULT 1, picture TEXT, notes TEXT, moveid INTEGER, FOREIGN KEY(moveid) REFERENCES moves(id))');
+                           
+                msg = "<p>created db</p>";
+                           
+                //tx.executeSql('INSERT INTO moves(name, date, street, city, state, zip, country) VALUES("move one", "11/29/2014", "4800 street road", "trevose", "pa", 19053", "USA")');
+                document.querySelector('#status').innerHTML = msg;
+                //alert("on device ready...after db created!!");
+            });
+                           
+                           
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM testdb', [], function (tx, results) {
+                        var len = results.rows.length, i;
+                        msg = "<p>found rows: " + len + "</p>";
+                        document.querySelector('#status').innerHTML += msg;
+                        for (i=0; i<len; i++) {
+                            msg = "<p><b>ID: " results.rows.item(i).id + "; data: " + results.rows.item(i).name + ", " + results.rows.item(i).date + ", " + results.rows.item(i).street + ", " + results.rows.item(i).city + ", " + results.rows.item(i).state + ", " + results.rows.item(i).zip + ", " + results.rows.item(i).country +  "</b></p>";
+                            document.querySelector('#status').innerHTML += msg;
+                        }
+                        //alert("results.rows.length: " + result.rows.length + " [should be 2]");
+                }, errorCB);
+                //alert("queryin done...");
+            });
+        }
+        
+        //function called when DB error occurs
+        function errorCB(err) {
+            alert("Error processing SQL: " + err.code);
+        }*/
+        
+        </script>
+
+    </body>
+</html>
