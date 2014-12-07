@@ -249,8 +249,7 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-newitemname" id="text-newitemname" placeholder="Item Name" data-clear-btn="true">
-                        <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder">Folder</label>
                         <label for="textarea-newitemnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-newitemnotes" id="textarea-newitemnotes"></textarea>
                     </form>
@@ -268,7 +267,7 @@
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
                         <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -286,8 +285,7 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
-                        <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -305,9 +303,8 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true">
-                        <label>Picture:</label>
-                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Add Photo</button> <br>
-                        <img style="display:none;width:100%;" id="image1" src="" /> <br>
+                        <img id="image1" src="" style="width:300px;height:200px"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Capture Photo</button><br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                     </form>
@@ -325,10 +322,9 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Living Room">
-                        <label for="flip-folder">Folder</label>
-                        <input type="checkbox" data-role="flipswitch" name="flip-folder" id="flip-folder" value="on" data-wrapper-class="custom-label-flipswitch" data-off-text="No" data-on-text="Yes" disabled="disabled">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
-                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Notes: Boxes for living room</textarea>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Boxes for living room</textarea>
                     </form>
                     
                     <div class="ui-grid-b ui-responsive">
@@ -361,8 +357,12 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <p> Folder: Books<br>
-                    Notes: From book shelves<br></p>
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Books">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">From book shelves</textarea>
+                    </form>
                     
                     <div class="ui-grid-b ui-responsive">
                         <div class="ui-bar"><a href="#viewfolderitem3"><img src="img/books.jpg" style="width:50px;height:50px"><br>Shelf 1</a></div>
@@ -389,8 +389,12 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <p> Folder: Bedroom - Lily<br>
-                    Notes: Boxes for Lily's bedroom<br></p>
+                    <form>
+                        <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Bedroom - Lily">
+                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
+                        <label for="textarea-listnotes">Notes:</label>
+                        <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Boxes for Lily's bedroom</textarea>
+                    </form>
                     
                     <div class="ui-grid-b ui-responsive">
                         <div class="ui-bar"><a href="#viewfolderitem3"><img src="img/books.jpg" style="width:50px;height:50px"><br>Books</a></div>
@@ -421,8 +425,8 @@
                 <div role="main" class="ui-content">
                     <form>
                         <p>Item: TV</p>
-                        <img id="image1" src="img/tv.jpg" style="width:300px;height:200px"><br>
-                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
+                        <img id="image1" src="img/tv.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
+                        <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button><br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
                     </form>
@@ -439,7 +443,7 @@
                 <div role="main" class="ui-content">
                     <form>
                         <p>Item: Piano Seat</p>
-                        <img id="image1" src="img/pianoseat.jpg" style="width:400px;height:300px"><br>
+                        <img id="image1" src="img/pianoseat.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -458,7 +462,7 @@
                 <div role="main" class="ui-content">
                     <form>
                         <p>Item: Books</p>
-                        <img id="image1" src="img/books.jpg" style="width:400px;height:300px"><br>
+                        <img id="image1" src="img/books.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -476,7 +480,7 @@
                 <div role="main" class="ui-content">
                     <form>
                         <p>Item: Stuffed animals</p>
-                        <img id="image1" src="img/stuffedanimals.jpg" style="width:400px;height:300px"><br>
+                        <img id="image1" src="img/stuffedanimals.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -487,44 +491,43 @@
 
             <div data-role="page" id="search">  <!-- Search page -->
                 <header data-role="header">
-                    <h1>Search</h1>
+                    <h1>Nearby Places</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
+                    <button class="ui-btn ui-icon-search ui-btn-icon-left" data-mini="true" onclick="locateUser();">Search</button>
                 </header>
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <input type="search" name="text-search" id="text-search" placeholder="Search locations">
-                        <!--<input type="text" name="text-distance" id="text-distance" data-clear-btn="true" placeholder="Distance (in miles):">-->
+                        <input type="text" name="text-search" id="text-search" data-clear-btn="true" data-mini="true" placeholder="Search businesses">
+                        <input type="text" name="text-location" id="text-location" data-clear-btn="true" data-mini="true" placeholder="Enter location">
+                        <!--<button class="ui-btn ui-icon-search ui-btn-icon-left" data-mini="true" onclick="getUserLocation();">Search</button>-->
                     </form>
-                    <button class="ui-btn ui-icon-search ui-btn-icon-notext" onclick="getUserLocation();">Search</button>
-                    
-                    <p>Results:</p>
-                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=piscataway, nj&zoom=11&size=200x200">
+
+                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=piscataway, nj&zoom=11&size=300x200" style="display:block;margin:0 auto"><br>
                     
                     <ul data-role="listview">
                         <li><a href="#">
-                            <p>Home Depot - 13 miles<br>
-                            3 Main Street (555-555-5555)</p></a>
+                            Home Depot - 13 miles<br>
+                            3 Main Street (609-555-8877)</a>
+                        </li>
+                        <li><a href="#">Lowes - 20 miles<br>
+                            34 Uptown Road (712-333-3456)</a>
+                        </li>
+                        <li><a href="#">
+                            <p>Home Depot - 15 miles<br>
+                            44 Main Street (217-234-2363)</p></a>
+                        </li>
+                        <li><a href="#">
+                            <p>Lowes - 30 miles<br>
+                            456 Downtown Street (609-456-4532)</p></a>
+                        </li>
+                        <li><a href="#">
+                            <p>Lowes - 34 miles<br>
+                            67 Shopping Road (728-123-7890)</p></a>
                         </li>
                         <li><a href="#">
                             <p>Lowes - 20 miles<br>
-                            34 Uptown Road (333-333-3333)</p></a>
-                        </li>
-                        <li><a href="#">
-                            <p>Home Depot - 13 miles<br>
-                            3 Main Street (555-555-5555)</p></a>
-                        </li>
-                        <li><a href="#">
-                            <p>Lowes - 20 miles<br>
-                            34 Uptown Road (333-333-3333)</p></a>
-                        </li>
-                        <li><a href="#">
-                            <p>Lowes - 20 miles<br>
-                            34 Uptown Road (333-333-3333)</p></a>
-                        </li>
-                        <li><a href="#">
-                            <p>Lowes - 20 miles<br>
-                            34 Uptown Road (333-333-3333)</p></a>
+                            394 Midway Road (678-454-3456)</p></a>
                         </li>
                     </ul>
                     
@@ -682,16 +685,23 @@
        var locationSuccess = function(position) {
                         //alert(position.coords.latitude + "\n" + position.coords.longitude);
                         latlon = position.coords.latitude + ',' + position.coords.longitude;
-                        $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + latlon + '&zoom=11&size=200x200')
+                        $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + latlon + '&zoom=11&size=300x200')
+                        
         };
         
         function locationError(error) {
             alert("Unable to get current location");
         }
         
-        
+        // Get user's current location
         function getUserLocation() {
             navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+        }
+        
+        // Use location field value to generate map
+        function locateUser() {
+            //alert('https://maps.googleapis.com/maps/api/staticmap?center=' + $('#text-location').val() + '&zoom=11&size=300x200&markers=' + $('#text-location').val());
+            $("#map").attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + $('#text-location').val() + '&zoom=11&size=300x200&markers=' + $('#text-location').val())
         }
 
 
