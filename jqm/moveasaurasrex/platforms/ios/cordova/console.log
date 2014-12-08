@@ -994,3 +994,20 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2014-12-06 19:51:21.173 Move-A-SaurasREX[16354:309762] Finished load of: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Bundle/Application/0A7C4645-4873-423D-B560-6B3A62B2C876/Move-A-SaurasREX.app/www/index.html
 2014-12-06 19:52:05.448 Move-A-SaurasREX[16354:309762] CDVWebViewDelegate: Navigation started when state=1
 2014-12-06 19:52:05.448 Move-A-SaurasREX[16354:309762] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-12-07 19:46:54.166 Move-A-SaurusREX[21437:628573] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Data/Application/1B13860A-153D-4A33-866E-918662BC60A4/Library/Cookies/Cookies.binarycookies
+2014-12-07 19:46:54.649 Move-A-SaurusREX[21437:628573] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-07 19:46:54.649 Move-A-SaurusREX[21437:628573] Multi-tasking -> Device: YES, App: YES
+2014-12-07 19:46:54.674 Move-A-SaurusREX[21437:628573] Unlimited access to network resources
+2014-12-07 19:46:54.695 Move-A-SaurusREX[21437:628573] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-07 19:46:55.409 Move-A-SaurusREX[21437:628573] [CDVTimer][file] 16.658008ms
+2014-12-07 19:46:55.706 Move-A-SaurusREX[21437:628573] [CDVTimer][splashscreen] 296.557009ms
+2014-12-07 19:46:55.706 Move-A-SaurusREX[21437:628573] [CDVTimer][TotalPluginStartup] 313.718975ms
+2014-12-07 19:46:56.805 Move-A-SaurusREX[21437:628573] Resetting plugins due to page load.
+2014-12-07 19:46:57.556 Move-A-SaurusREX[21437:628573] Finished load of: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Bundle/Application/3039A681-C3C2-4896-A1FB-820486F71E42/Move-A-SaurusREX.app/www/index.html

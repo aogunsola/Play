@@ -27,7 +27,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.min.css">
 
-        <title>Move-A-SaurasREX</title>
+        <title>Move-A-SaurusREX</title>
         
     </head>
     <body>
@@ -41,7 +41,7 @@
             
             <div data-role="page" id="home">  <!-- Home page -->
                 <div data-role="header">
-                    <h1>Move-A-SaurasREX</h1>
+                    <h1>Move-A-SaurusREX</h1>
                     <a href="#movedetailsnew" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="edit" data-iconpos="notext">Add</a>
                 </div>
                 
@@ -266,8 +266,6 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call friends">
-                        <label for="flip-folder">Folder</label>
-                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Cindy, the Johnsons, the Jones.</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -285,7 +283,6 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Call BFF">
-                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Call Brenda</textarea>
                         <label><input type="checkbox">Completed</label>
@@ -322,7 +319,6 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Living Room">
-                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Boxes for living room</textarea>
                     </form>
@@ -359,7 +355,6 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Books">
-                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">From book shelves</textarea>
                     </form>
@@ -391,7 +386,6 @@
                 <div role="main" class="ui-content">
                     <form>
                         <input type="text" name="text-listname" id="text-listname" placeholder="List Name" data-clear-btn="true" value="Bedroom - Lily">
-                        <label><input type="checkbox" name="checkbox-folder" id="checkbox-folder" value="Folder" checked disabled="">Folder</label>
                         <label for="textarea-listnotes">Notes:</label>
                         <textarea cols="40" rows="60" name="textarea-listnotes" id="textarea-listnotes">Boxes for Lily's bedroom</textarea>
                     </form>
@@ -424,8 +418,8 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <p>Item: TV</p>
-                        <img id="image1" src="img/tv.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" value="TV">
+                        <img id="image1" src="img/tv.jpg" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button><br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -442,8 +436,8 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <p>Item: Piano Seat</p>
-                        <img id="image1" src="img/pianoseat.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" value="Piano Seat">
+                        <img id="image1" src="img/pianoseat.jpg" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -461,8 +455,8 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <p>Item: Books</p>
-                        <img id="image1" src="img/books.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" value="Books">
+                        <img id="image1" src="img/books.jpg" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -479,8 +473,8 @@
                 
                 <div role="main" class="ui-content">
                     <form>
-                        <p>Item: Stuffed animals</p>
-                        <img id="image1" src="img/stuffedanimals.jpg" style="width:400px;height:300px;display:block;margin:0 auto"><br>
+                        <input type="text" name="text-itemname" id="text-itemname" placeholder="Item Name"data-clear-btn="true" value="Stuffed animals">
+                        <img id="image1" src="img/stuffedanimals.jpg" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                         <button class="ui-btn ui-icon-camera ui-btn-icon-left" onclick="capturePhoto();">Update Photo</button> <br>
                         <label for="textarea-itemnotes">Notes:</label>
                         <textarea cols="40" rows="20" name="textarea-itemnotes" id="textarea-itemnotes"></textarea>
@@ -507,11 +501,12 @@
                     
                     <ul data-role="listview">
                         <li><a href="#">
-                            Home Depot - 13 miles<br>
-                            3 Main Street (609-555-8877)</a>
+                            <p>Home Depot - 13 miles<br>
+                            3 Main Street (609-555-8877)</p></a>
                         </li>
-                        <li><a href="#">Lowes - 20 miles<br>
-                            34 Uptown Road (712-333-3456)</a>
+                        <li><a href="#">
+                            <p>Lowes - 20 miles<br>
+                            34 Uptown Road (712-333-3456)</p></a>
                         </li>
                         <li><a href="#">
                             <p>Home Depot - 15 miles<br>
@@ -581,15 +576,18 @@
                 </header>
                 
                 <div role="main" class="ui-content">
-                    <p><strong>Move-A-SaurasREX</strong><br>
+                    <p><strong>Move-A-SaurusREX</strong><br>
                     Taking the terror out of moving<p>
                     <p>Version: 1.0</p>
                     <p>Creators:<br>
                     Ayoola Ogunsola, Pamela Lai, William Karavites</p>
                     
-                    <br>
-                    <p><a href="http://mbs.rutgers.edu" class="ui-btn ui-icon-info ui-btn-icon-left">Review Help topics</a></p>
-                    <p><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Rate Our App</a></p>
+                    <ul data-role="listview" data-inset="true">
+                        <li><a href="http://mbs.rutgers.edu" target="_blank" class="ui-btn ui-icon-info ui-btn-icon-left">Review Help topics</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Rate our app</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Post to Facebook about our app</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Tweet about our app</a></li>
+                    </ul>
                 </div>
                 
                 <div data-role="footer" data-position="fixed">

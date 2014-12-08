@@ -6,6 +6,13 @@
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurausrex/R$string.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurausrex/R$xml.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurausrex/R.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/BuildConfig.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/CordovaApp.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/R$attr.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/R$drawable.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/R$string.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/R$xml.class \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/com/ayoolao/moveasaurusrex/R.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \

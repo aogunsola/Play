@@ -37,7 +37,15 @@
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/css/index.css \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/books.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/dolls.jpg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/logo.png \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/pianoseat.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/pillows.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/soundsystem.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/speakers.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/stuffedanimals.jpg \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/tv.jpg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/index.js \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/jquery \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js/jquery-1.11.1.js \
