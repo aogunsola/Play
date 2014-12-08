@@ -25,6 +25,9 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+        <!--<link rel="stylesheet" href="themes/mytheme1.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />-->
+        <link rel="stylesheet" href="js/jquery/jquery.mobile.structure-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="js/jquery/jquery.mobile-1.4.5.min.css">
 
         <title>Move-A-SaurusREX</title>
@@ -40,8 +43,8 @@
             
             
             <div data-role="page" id="home">  <!-- Home page -->
-                <div data-role="header">
-                    <h1>Move-A-SaurusREX</h1>
+                <div data-role="header" data-theme="b">
+                    <h2>Move-A-SaurusREX</h2>
                     <a href="#movedetailsnew" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="edit" data-iconpos="notext">Add</a>
                 </div>
                 
@@ -62,12 +65,10 @@
                             <span class="ui-li-count">8</span></a>
                         </li>
                     </ul>
-                    <div id="section">
-                        <img src="xxx"><p>ADVERTISING HERE</p>
-                    </div>
                 </div>
                 
                 <div data-role="footer" data-position="fixed">
+                    <img src="img/advertising1.png" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                     <div data-role="navbar">
                         <ul>
                             <li><a href="#home" data-icon="home">Home</a></li>
@@ -80,7 +81,7 @@
             </div> <!-- page end -->
 
             <div data-role="page" id="movedetails1">  <!-- MoveDetails page 1 (FL) -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Move Info</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -105,7 +106,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="movedetails2">  <!-- MoveDetails page 2 (RU) -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Move Info</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -130,7 +131,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="movedetailsnew">  <!-- MoveDetailsNew page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>New Move</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -156,7 +157,7 @@
 
 
             <div data-role="page" id="movelists1">  <!-- MoveLists page 1 (FL)-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Move Lists</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#popupMenu1" class="ui-btn-right ui-nodisc-icon" data-icon="action" data-theme="b" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
@@ -198,7 +199,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="movelists2">  <!-- MoveLists page 2 (RU)-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Move Lists</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#popupMenu2" class="ui-btn-right ui-nodisc-icon" data-icon="action" data-theme="b" data-iconpos="notext" data-rel="popup" data-transition="slideup">Actions...</a>
@@ -240,7 +241,7 @@
             
 
             <div data-role="page" id="newitem">  <!-- NewItem page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>New Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -257,7 +258,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewlist1">  <!-- ViewList page 1 -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>List Item</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
@@ -274,7 +275,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewlist2">  <!-- ViewList page 2 -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>List Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -291,7 +292,7 @@
             </div> <!-- page end -->
 
             <div data-role="page" id="newfolderitem">  <!-- NewFolderItem page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>New Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -310,7 +311,7 @@
 
 
             <div data-role="page" id="viewfolder1">  <!-- ViewFolder page 1 (Living Rm)-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
@@ -346,7 +347,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewfolder2">  <!-- ViewFolder page 2 (Books)-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
@@ -377,7 +378,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewfolder3">  <!-- ViewFolder page 3 (Bedroom-Lily)-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <a href="#newfolderitem" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="plus" data-iconpos="notext">Add</a>
@@ -410,7 +411,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewfolderitem1">  <!-- ViewFolderItem page 1 -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -428,7 +429,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewfolderitem2">  <!-- ViewFolderItem page  2-->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -447,7 +448,7 @@
             
             
             <div data-role="page" id="viewfolderitem3">  <!-- ViewFolderItem page 3 -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -465,7 +466,7 @@
             </div> <!-- page end -->
             
             <div data-role="page" id="viewfolderitem4">  <!-- ViewFolderItem page 4 -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Folder Item</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
@@ -484,7 +485,7 @@
 
 
             <div data-role="page" id="search">  <!-- Search page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Nearby Places</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                     <button class="ui-btn ui-icon-search ui-btn-icon-left" data-mini="true" onclick="locateUser();">Search</button>
@@ -542,7 +543,7 @@
 
 
             <div data-role="page" id="share">  <!-- Share page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Share Data</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                 </header>
@@ -552,11 +553,10 @@
                         <li><a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">Print all items</a></li>
                         <li><a href="#" class="ui-btn ui-icon-user ui-btn-icon-left">Share via Email</a></li>
                     </ul>
-                    
-                    <p>ADVERTISING HERE</p>
                 </div>
                 
                 <footer data-role="footer" data-position="fixed">
+                    <img src="img/advertising2.png" style="width:300px;height:200px;display:block;margin:0 auto"><br>
                     <nav data-role="navbar">
                         <ul>
                             <li><a href="#home" data-icon="home">Home</a></li>
@@ -570,7 +570,7 @@
 
 
             <div data-role="page" id="info">  <!-- Info page -->
-                <header data-role="header">
+                <header data-role="header" data-theme="b">
                     <h1>Info</h1>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-icon="back" data-theme="b" data-iconpos="notext" data-rel="back">Back</a>
                 </header>
@@ -583,7 +583,7 @@
                     Ayoola Ogunsola, Pamela Lai, William Karavites</p>
                     
                     <ul data-role="listview" data-inset="true">
-                        <li><a href="http://mbs.rutgers.edu" target="_blank" class="ui-btn ui-icon-info ui-btn-icon-left">Review Help topics</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-info ui-btn-icon-left">Review Help topics</a></li>
                         <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Rate our app</a></li>
                         <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Post to Facebook about our app</a></li>
                         <li><a href="#" class="ui-btn ui-icon-comment ui-btn-icon-left">Tweet about our app</a></li>
