@@ -37,6 +37,8 @@
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/js \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/plugins \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/css/index.css \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/advertising1.png \
+/Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/advertising2.png \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/books.jpg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/dolls.jpg \
 /Users/ayoola/documents/github/play/jqm/moveasaurasrex/platforms/android/assets/www/img/logo.png \

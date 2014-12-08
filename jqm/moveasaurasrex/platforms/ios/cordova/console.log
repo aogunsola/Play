@@ -1045,3 +1045,37 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2014-12-07 20:10:18.552 Move-A-SaurusREX[24451:645894] [CDVTimer][TotalPluginStartup] 69.555044ms
 2014-12-07 20:10:19.503 Move-A-SaurusREX[24451:645894] Resetting plugins due to page load.
 2014-12-07 20:10:20.709 Move-A-SaurusREX[24451:645894] Finished load of: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Bundle/Application/05E4BD77-32D3-46B7-AD81-C4A011A14B85/Move-A-SaurusREX.app/www/index.html
+2014-12-08 00:56:43.214 Move-A-SaurusREX[29444:721054] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Data/Application/C278CA15-C9B2-436D-A4A4-954835DB3CF5/Library/Cookies/Cookies.binarycookies
+2014-12-08 00:56:43.729 Move-A-SaurusREX[29444:721054] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-08 00:56:43.731 Move-A-SaurusREX[29444:721054] Multi-tasking -> Device: YES, App: YES
+2014-12-08 00:56:43.763 Move-A-SaurusREX[29444:721054] Unlimited access to network resources
+2014-12-08 00:56:43.798 Move-A-SaurusREX[29444:721054] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-08 00:56:44.588 Move-A-SaurusREX[29444:721054] [CDVTimer][file] 19.249976ms
+2014-12-08 00:56:44.927 Move-A-SaurusREX[29444:721054] [CDVTimer][splashscreen] 338.551044ms
+2014-12-08 00:56:44.927 Move-A-SaurusREX[29444:721054] [CDVTimer][TotalPluginStartup] 359.039009ms
+2014-12-08 00:56:46.051 Move-A-SaurusREX[29444:721054] Resetting plugins due to page load.
+2014-12-08 00:56:47.015 Move-A-SaurusREX[29444:721054] Finished load of: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Bundle/Application/016CCFD5-FE05-46CC-91CB-11858B6B7954/Move-A-SaurusREX.app/www/index.html
+2014-12-08 00:58:47.867 Move-A-SaurusREX[30438:723226] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Data/Application/D1FD9C42-A7FB-47E0-BD6C-7EA01B1126C7/Library/Cookies/Cookies.binarycookies
+2014-12-08 00:58:47.982 Move-A-SaurusREX[30438:723226] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-08 00:58:47.982 Move-A-SaurusREX[30438:723226] Multi-tasking -> Device: YES, App: YES
+2014-12-08 00:58:47.985 Move-A-SaurusREX[30438:723226] Unlimited access to network resources
+2014-12-08 00:58:47.987 Move-A-SaurusREX[30438:723226] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-08 00:58:48.256 Move-A-SaurusREX[30438:723226] [CDVTimer][file] 13.239026ms
+2014-12-08 00:58:48.307 Move-A-SaurusREX[30438:723226] [CDVTimer][splashscreen] 50.489962ms
+2014-12-08 00:58:48.307 Move-A-SaurusREX[30438:723226] [CDVTimer][TotalPluginStartup] 64.112008ms
+2014-12-08 00:58:48.439 Move-A-SaurusREX[30438:723226] Resetting plugins due to page load.
+2014-12-08 00:58:48.929 Move-A-SaurusREX[30438:723226] Finished load of: file:///Users/ayoola/Library/Developer/CoreSimulator/Devices/41D6AA9E-63AA-40B6-9762-71D17476B290/data/Containers/Bundle/Application/2BF4E291-C967-4B61-A64D-9C8E2334C02D/Move-A-SaurusREX.app/www/index.html
