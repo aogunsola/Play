@@ -164,7 +164,7 @@
                     <div id="popupMenu1" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails1">Edit move</a></li>
-                            <li><a href="#newitem">Add new item</a></li>
+                            <li><a href="#newitem">Add item</a></li>
                         </ul>
                     </div>
                 </header>
@@ -176,7 +176,7 @@
                         <li><a href="#viewfolder3"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Lily<span class="ui-li-count">3</span></a></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - Master<span class="ui-li-count">5</span></a></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Bedroom - John<span class="ui-li-count">8</span></a></a></li>
-                        <li data-role="list-divider">Checklists</li>
+                        <li data-role="list-divider">Tasks</li>
                         <li><a href="#viewlist1">Call friends</a></li>
                         <li><a href="#">Stop and forward mail</a></li>
                         <li><a href="#">Quotes from movers</a></li>
@@ -206,7 +206,7 @@
                     <div id="popupMenu2" data-role="popup">
                         <ul data-role="listview" data-inset="true">
                             <li><a href="#movedetails2">Edit move</a></li>
-                            <li><a href="#newitem">Add new item</a></li>
+                            <li><a href="#newitem">Add item</a></li>
                         </ul>
                     </div>
                 </header>
@@ -218,7 +218,7 @@
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Clothes<span class="ui-li-count">8</span></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Food<span class="ui-li-count">5</span></a></a></li>
                         <li><a href="#"><img src="xx" class="ui-li-icon ui-corner-none">Other<span class="ui-li-count">5</span></a></a></li>
-                        <li data-role="list-divider">Checklists</li>
+                        <li data-role="list-divider">Tasks</li>
                         <li><a href="#viewlist2">Call BFF</a></li>
                         <li><a href="#">Find grocery stores</a></li>
                         <li data-role="list-divider" data-theme="c">COMPLETED</li>
@@ -259,7 +259,7 @@
             
             <div data-role="page" id="viewlist1">  <!-- ViewList page 1 -->
                 <header data-role="header" data-theme="b">
-                    <h1>List Item</h1>
+                    <h1>Task</h1>
                     <a href="#" class= "ui-btn ui-btn-right" data-rel="back">Done</a>
                     <a href="#" class= "ui-btn ui-btn-left" data-rel="back">Cancel</a>
                 </header>
@@ -276,7 +276,7 @@
             
             <div data-role="page" id="viewlist2">  <!-- ViewList page 2 -->
                 <header data-role="header" data-theme="b">
-                    <h1>List Item</h1>
+                    <h1>Task</h1>
                     <a href="#" class="ui-btn-right ui-nodisc-icon" data-theme="b" data-icon="check" data-iconpos="notext" data-rel="back">Done</a>
                     <a href="#" class="ui-btn-left ui-nodisc-icon" data-theme="b" data-icon="delete" data-iconpos="notext"data-rel="back">Cancel</a>
                 </header>
@@ -615,8 +615,8 @@
             
             
         <script type="text/javascript" charset="utf-8">
-        var db;
-        var msg;
+        //var db;
+        //var msg;
         var pictureSource; // picture source
         var destinationType; // sets the format of returned value
         var smallImage;
@@ -639,7 +639,7 @@
             navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
                                         quality: 50, allowEdit : true, destinationType: destinationType.DATA_URL
                                         });
-            $('#image1').attr('src', smallImage)
+            $("#image1").attr('src', smallImage)
         }
         
         // Called if something bad happens.
